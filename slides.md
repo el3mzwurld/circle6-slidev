@@ -217,3 +217,467 @@ console.log(typeof name)
 # Collaboration Practices within Software Development
 
 <!-- git and version control with GitHub -->
+
+---
+
+# What is Control Flow?
+<p class="text-[16px]">
+Control flow determines the order in which instructions/statements execute. If a script does not include statement that alter it flow, its executed from beginning to the end (top - bottom). JavaScript programs commonly use these three approaches:
+</p>
+
+- **Sequence:** Executes instructions in order
+- **Selection:** Choose which instruction to execute
+- **Iteration:** Repeates instructions
+
+```js
+console.log('Wake up');
+console.log('Brush your teeth');
+console.log('Eat breakfast');
+```
+<p>JavaScript executes these statement from top to bottom. First, wake up; then brush your teeth; finally, eat breakfast.</p>
+
+<!-- 
+  But what if you don't have a toothbrush? Or what if you want to repeat brushing your teeth every morning?
+  We need a way to make decisions and repeat instructions. That's where control flow structures come in.
+-->
+
+---
+
+## Conditionals
+<p class="text-base mt-3">
+Conditional statements determine whether code should be execute based on one or two conditions. The conditional statement execute the code, if the associated conditions are <span class = "text-red-400">true </span>
+</p>
+
+<p>In JavaScript there are different types of conditionals depending on the problem you intend to solve. Common conditional statement includes:</p>
+
+- `if`
+- `if...else`
+- `Multiple if...else`
+- `?: ternary operator`
+- `switch`
+
+<p><span class = "text-red-600">Note</span>: Conditional are very important in JavaScript and all other programming language. It helps with making informed decisions based on the problem faced</p>
+
+---
+
+### The `if` statement
+<div v-click class="text-sm">
+<P>An `if` statement execute a block of code when the condition is true.</P>
+
+- **Syntax**:
+```js
+if (condition) {
+//  block of code to be executed
+}
+```
+<p class="mt-10"></p>
+
+```js {monaco-run}{autorun: false}
+let age = 20;
+
+if (age >= 18) {
+console.log ("You're an adult");
+}
+```
+<p>If the  condition is false, the block of code is skipped</p>
+</div>
+
+---
+
+### The `if...else` statement
+<div v-click class="text-sm">
+<p>Uses `else` to provide an alternative when the `if` the condition is false</p>
+
+- **Syntax**:
+```js
+if (condition) {
+//  block of code to be executed if code is true
+} else {
+// block of code to be executed if code is false
+}
+```
+<p class="mt-10"></p>
+
+```js {monaco-run}{autorun: false}
+const isLoggedIn = false;
+
+if (isLoggedIn) {
+console.log ("Welcome back!");
+} else {
+  console.log ("Please log in.");
+}
+```
+
+</div>
+
+<p class="mt-10"></p>
+
+### The `Multiple if...else` statement
+
+<div v-click class="text-sm">
+<p>The `multiple if...else` also called `else if` statement is used to check multiple conditions</p>
+</div>
+
+---
+
+<div>
+
+- **Syntax**:
+```js
+if (condition) {
+//  block of code to be executed if code is true
+} else if {
+// block of code to be executed if first condition is false and the second condition is true
+} else {
+// block of code to execute if first and second condition is false
+}
+```
+
+<p class="mt-10"></p>
+
+```js {monaco-run}{autorun: false}
+const score = 75;
+
+if (score >= 80) {
+console.log ("Grade A");
+}else if (score >= 70) {
+  console.log ("Grade B");
+}else if (score >= 60) {
+console.log ("Grade C");
+}else {
+  console.log ("Try again.");
+}
+```
+
+<p> JavaScript executes the first maching conditions and skips the remaining conditions.</p>
+</div>
+
+---
+
+
+### Trenary Operator: `?:`
+<div v-click class="text-sm">
+<p>The ternary operator `?:` is also a conditional statement that operate on three values. A simpler way of writing an `if...else` statement</p>
+
+- **Syntax**:
+```js
+**condition ? expression_if_true : expression_if_false**
+```
+<p class="mt-10"></p>
+
+```js {monaco-run}{autorun: false}
+let age = 20;
+
+let canVote = (age > 18) ? true : false 
+console.log (canVote);
+
+```
+</div>
+
+<p class="mt-10"></p>
+
+### The `Switch` Statement
+<div v-click class="text-sm">
+<p>A `switch` statement compares an expression against different case values.</p>
+
+<p>`break` prevents execution from falling through to the next case.</p>
+<p>`default` runs when no case matches.</p>
+
+</div>
+
+---
+
+<div>
+
+- **Syntax**:
+
+```js
+switch (expression) {
+    case value1:
+        // Code to execute if expression matches value1
+        break;
+    case value2:
+        // Code to execute if expression matches value2
+        break;
+    default:
+        // Code to execute if no cases match
+}
+
+```
+
+<p class="mt-5"></p>
+
+```js {monaco-run}{autorun: false}
+const day = 'Monday';
+
+switch (day) {
+  case 'Monday':
+    console.log('Start of the week');
+    break;
+    case 'Wednesday':
+      console.log('The week is divided');
+      break;
+      case 'Friday':
+        console.log('The weekend is upon us');
+        break;
+        default:
+          console.log('Another day');
+}
+```
+
+</div>
+
+---
+
+# Loops
+<p class="text-[16px]">
+Loops let you repeat a set of statement for as long as the condition is met, or until a condition is met.
+</p>
+
+<p class="text-base mt-3">Types of Loops</p>
+
+- **while loop**
+- **do...loop**
+- **for loop**
+- **for...of loop**
+- **for...in loop**
+
+## The `while` loop
+<div v-click class="text-sm">
+<p>A while loop repeats as long as its condition is true</p>
+
+- **Syntax**:
+```js
+while (condition) {
+  // Code block to execute repeatedly
+  // Must include a way to update the condition (e.g., i++)
+}
+
+```
+</div>
+
+---
+
+<div>
+
+```js {monaco-run}{autorun: false}
+let count = 1
+while (count <= 3) {
+  console.log(count);
+  count++;
+}
+```
+</div>
+
+<p class="mt-10"></p>
+
+## The `do...while` loop
+<div v-click class="text-sm">
+<p>A `do...while` loop executes the body of the code at least once before checking the condition</p>
+
+- **Syntax**:
+```js
+do {
+    // code block to be executed
+} while (condition);
+
+```
+<p class="mt-10"></p>
+
+```js {monaco-run}{autorun: false}
+let number = 5;
+
+do {
+  console.log(number);
+} while (number < 5);
+```
+<p>Note: Even though the condition is initially false, the body still execute once</p>
+</div>
+
+---
+
+## The `for` loop
+<div v-click class="text-sm">
+<p>A for loop is useful when you know the number of time you wan the code to run</p>
+
+- **Syntax**:
+```js
+for (initialization; condition; update) {
+    // code to be executed
+}
+
+```
+<p class="mt-10"></p>
+
+```js {monaco-run}{autorun: false}
+for (let i = 1; i <= 5; i++) {
+  console.log(i);
+}
+```
+
+<p>Everything inside the parentese gets executed as long as the condiion is met</p>
+<p>Note: There's a difference between `< and <=`</p>
+
+</div>
+
+---
+
+## The `for...of` loop
+
+<div v-click class="text-sm">
+<p>The `for...of` loop is used to loop over iterable properties. An iterable property is an element or object that has countable value e.g Array, string, map, set</p>
+
+- **Syntax**:
+```js
+for (const element of iterable) {
+  // code to be executed
+}
+
+```
+<p class="mt-10"></p>
+
+```js {monaco-run}{autorun: false}
+const fruits = ['Pawpaw', 'Orange', 'Pineapple', 'Banana'];
+
+for (const fruit of fruits) {
+  console.log(fruit);
+}
+```
+</div>
+
+---
+
+## The `for...in` loop
+<div v-click class="text-sm">
+<p>The `for...in` loop is used to loop or iterate over enumberable property of an object</p>
+
+- **Syntax**:
+```js
+for (let key in object) {
+  // code to be executed
+}
+
+```
+
+<p class="mt-10"></p>
+
+```js {monaco-run}{autorun: false}
+const student = {
+  name: 'Blessing',
+  learnerID: 'SEO123',
+  faculty: 'fullstack engineering'
+};
+
+for (const key in student) {
+  console.log(key)
+}
+```
+</div>
+
+---
+
+# Functions
+<p class="text-[16px]">
+A Function is a resuable block of code written to perform a particular task (it can be called many times). 
+</p>
+
+## Important things to note before declaring a function
+
+- The function keyword is written first
+- The fnction name follows
+- A list of parameter (if any) is enclosed in parentheses.
+- The function body, containing the code to be executed, is enclosed in curly braces.
+- To execute the code, function must be called by its name followed by parentheses.
+
+## Importance of Function
+- It helps avoid unnnecessary code repitition
+- Organizes code into smaller units
+- Accept inputs and produce results
+- Makes programs easier to maintain
+
+---
+
+### Function without parameters
+- **Parameters:** Are variables listed in a funcion definition.
+- **Arguments:** Are the actual values passed when calling the function
+
+- **Function declaration Syntax**:
+```js
+function name(parameter1, parameter2, ...parameterN) {
+  // code to be executed
+}
+```
+
+```js {monaco-run}{autorun: false}
+
+function sum () {
+  let result = 10 + 10
+  console.log(`The result is: ${result}`)
+}
+sum();
+
+```
+
+---
+
+### Function with Paramaeters
+```js {monaco-run}{autorun: false}
+function displayName (firstName, lastName) {
+  console.log(`Fullname: ${firstName} ${lastName}`)
+}
+
+displayName('Blessing', 'Dawodu');
+
+```
+
+Note: When arguements are not passed to a function that has parameters, it automatically logs `undefined`. If you're deining a function that takes in parameters, define default values.
+
+### Function with return
+
+```js {monaco-run}{autorun: false}
+function substract (a, b) {
+  return a - b;
+}
+const result = substract(15, 6)
+console.log(result);
+```
+
+<p>Note: Every code you put under the retrun keyword does not get executed. Implictly, if you do not add a value to the return keyword it returns `undefined`</p>
+
+- Return: Ends the current function execution and provides result.
+
+---
+
+```js {monaco-run}{autorun: false}
+
+function getFullName(firstName, lastName) {
+  const fullName = firstName + " " + lastName
+  return fullName
+}
+ let fullName = getFullName('Blessing', 'Dawodu');
+ console.log(fullName)
+```
+
+### Function Expression
+
+<p>Function expression is another variant of declaring a function whereby the function is assigned a value</p>
+
+```js {monaco-run}{autorun: false}
+const greeting = function(message){
+  return message;
+}
+  console.log(greeting('Hello, My name is Blessing'));
+
+```
+
+### Arrow Function
+<p>Arrow Function prvide a shorter syntax for writing function expression</p>
+
+```js {monaco-run}{autorun: false}
+const multiply = (a, b) => {
+  return a * b;
+}
+
+console.log(multiply(3, 4))
+```
+
