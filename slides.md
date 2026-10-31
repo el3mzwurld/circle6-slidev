@@ -212,28 +212,25 @@ console.log(typeof name)
 </div>
 
 <p v-click class="text-sm">Can this be resolved? of course. But it would break many legacy websites and libraries that rely on this tiny hiccup...so it remains the flaw of Javascript that has grown to be beautiful I guess 🤷🏽‍♂️ </p>
----
-
-# Collaboration Practices within Software Development
-
-<!-- git and version control with GitHub -->
 
 ---
 
 # What is Control Flow?
+
 <p class="text-[16px]">
 Control flow determines the order in which instructions/statements execute. If a script does not include statement that alter it flow, its executed from beginning to the end (top - bottom). JavaScript programs commonly use these three approaches:
 </p>
 
-- **Sequence:** Executes instructions in order
-- **Selection:** Choose which instruction to execute
-- **Iteration:** Repeates instructions
+* **Sequence:** Executes instructions in order
+* **Selection:** Choose which instruction to execute
+* **Iteration:** Repeates instructions
 
 ```js
 console.log('Wake up');
 console.log('Brush your teeth');
 console.log('Eat breakfast');
 ```
+
 <p>JavaScript executes these statement from top to bottom. First, wake up; then brush your teeth; finally, eat breakfast.</p>
 
 <!-- 
@@ -244,32 +241,36 @@ console.log('Eat breakfast');
 ---
 
 ## Conditionals
+
 <p class="text-base mt-3">
 Conditional statements determine whether code should be execute based on one or two conditions. The conditional statement execute the code, if the associated conditions are <span class = "text-red-400">true </span>
 </p>
 
 <p>In JavaScript there are different types of conditionals depending on the problem you intend to solve. Common conditional statement includes:</p>
 
-- `if`
-- `if...else`
-- `Multiple if...else`
-- `?: ternary operator`
-- `switch`
+* `if`
+* `if...else`
+* `Multiple if...else`
+* `?: ternary operator`
+* `switch`
 
 <p><span class = "text-red-600">Note</span>: Conditional are very important in JavaScript and all other programming language. It helps with making informed decisions based on the problem faced</p>
 
 ---
 
 ### The `if` statement
+
 <div v-click class="text-sm">
 <P>An `if` statement execute a block of code when the condition is true.</P>
 
-- **Syntax**:
+* **Syntax**:
+
 ```js
 if (condition) {
 //  block of code to be executed
 }
 ```
+
 <p class="mt-10"></p>
 
 ```js {monaco-run}{autorun: false}
@@ -279,16 +280,19 @@ if (age >= 18) {
 console.log ("You're an adult");
 }
 ```
+
 <p>If the  condition is false, the block of code is skipped</p>
 </div>
 
 ---
 
 ### The `if...else` statement
+
 <div v-click class="text-sm">
 <p>Uses `else` to provide an alternative when the `if` the condition is false</p>
 
-- **Syntax**:
+* **Syntax**:
+
 ```js
 if (condition) {
 //  block of code to be executed if code is true
@@ -296,6 +300,7 @@ if (condition) {
 // block of code to be executed if code is false
 }
 ```
+
 <p class="mt-10"></p>
 
 ```js {monaco-run}{autorun: false}
@@ -322,7 +327,8 @@ console.log ("Welcome back!");
 
 <div>
 
-- **Syntax**:
+* **Syntax**:
+
 ```js
 if (condition) {
 //  block of code to be executed if code is true
@@ -354,15 +360,17 @@ console.log ("Grade C");
 
 ---
 
-
 ### Trenary Operator: `?:`
+
 <div v-click class="text-sm">
 <p>The ternary operator `?:` is also a conditional statement that operate on three values. A simpler way of writing an `if...else` statement</p>
 
-- **Syntax**:
+* **Syntax**:
+
 ```js
 **condition ? expression_if_true : expression_if_false**
 ```
+
 <p class="mt-10"></p>
 
 ```js {monaco-run}{autorun: false}
@@ -372,11 +380,13 @@ let canVote = (age > 18) ? true : false
 console.log (canVote);
 
 ```
+
 </div>
 
 <p class="mt-10"></p>
 
 ### The `Switch` Statement
+
 <div v-click class="text-sm">
 <p>A `switch` statement compares an expression against different case values.</p>
 
@@ -389,7 +399,7 @@ console.log (canVote);
 
 <div>
 
-- **Syntax**:
+* **Syntax**:
 
 ```js
 switch (expression) {
@@ -430,23 +440,28 @@ switch (day) {
 ---
 
 # Loops
-<p class="text-[16px]">
+
+<p class="text-xs">
 Loops let you repeat a set of statement for as long as the condition is met, or until a condition is met.
 </p>
 
-<p class="text-base mt-3">Types of Loops</p>
+<div class="text-base mt-3"> Types of Loops
 
-- **while loop**
-- **do...loop**
-- **for loop**
-- **for...of loop**
-- **for...in loop**
+* **while loop**
+* **do...loop**
+* **for loop**
+* **for...of loop**
+* **for...in loop**
+
+</div>
 
 ## The `while` loop
+
 <div v-click class="text-sm">
 <p>A while loop repeats as long as its condition is true</p>
 
-- **Syntax**:
+* **Syntax**:
+
 ```js
 while (condition) {
   // Code block to execute repeatedly
@@ -454,6 +469,7 @@ while (condition) {
 }
 
 ```
+
 </div>
 
 ---
@@ -467,21 +483,25 @@ while (count <= 3) {
   count++;
 }
 ```
+
 </div>
 
 <p class="mt-10"></p>
 
 ## The `do...while` loop
+
 <div v-click class="text-sm">
 <p>A `do...while` loop executes the body of the code at least once before checking the condition</p>
 
-- **Syntax**:
+* **Syntax**:
+
 ```js
 do {
     // code block to be executed
 } while (condition);
 
 ```
+
 <p class="mt-10"></p>
 
 ```js {monaco-run}{autorun: false}
@@ -491,22 +511,26 @@ do {
   console.log(number);
 } while (number < 5);
 ```
+
 <p>Note: Even though the condition is initially false, the body still execute once</p>
 </div>
 
 ---
 
 ## The `for` loop
+
 <div v-click class="text-sm">
 <p>A for loop is useful when you know the number of time you wan the code to run</p>
 
-- **Syntax**:
+* **Syntax**:
+
 ```js
 for (initialization; condition; update) {
     // code to be executed
 }
 
 ```
+
 <p class="mt-10"></p>
 
 ```js {monaco-run}{autorun: false}
@@ -527,13 +551,15 @@ for (let i = 1; i <= 5; i++) {
 <div v-click class="text-sm">
 <p>The `for...of` loop is used to loop over iterable properties. An iterable property is an element or object that has countable value e.g Array, string, map, set</p>
 
-- **Syntax**:
+* **Syntax**:
+
 ```js
 for (const element of iterable) {
   // code to be executed
 }
 
 ```
+
 <p class="mt-10"></p>
 
 ```js {monaco-run}{autorun: false}
@@ -543,15 +569,18 @@ for (const fruit of fruits) {
   console.log(fruit);
 }
 ```
+
 </div>
 
 ---
 
 ## The `for...in` loop
+
 <div v-click class="text-sm">
 <p>The `for...in` loop is used to loop or iterate over enumberable property of an object</p>
 
-- **Syntax**:
+* **Syntax**:
+
 ```js
 for (let key in object) {
   // code to be executed
@@ -572,36 +601,45 @@ for (const key in student) {
   console.log(key)
 }
 ```
+
 </div>
 
 ---
 
 # Functions
+
 <p class="text-[16px]">
-A Function is a resuable block of code written to perform a particular task (it can be called many times). 
+A Function is a resuable block of code written to perform a particular task (it can be called many times).
 </p>
 
-## Important things to note before declaring a function
+<div class= "text-sm">
 
-- The function keyword is written first
-- The fnction name follows
-- A list of parameter (if any) is enclosed in parentheses.
-- The function body, containing the code to be executed, is enclosed in curly braces.
-- To execute the code, function must be called by its name followed by parentheses.
+### Important things to note before declaring a function
 
-## Importance of Function
-- It helps avoid unnnecessary code repitition
-- Organizes code into smaller units
-- Accept inputs and produce results
-- Makes programs easier to maintain
+* The function keyword is written first
+* The fnction name follows
+* A list of parameter (if any) is enclosed in parentheses.
+* The function body, containing the code to be executed, is enclosed in curly braces.
+* To execute the code, function must be called by its name followed by parentheses.
 
+### Importance of Function
+
+* It helps avoid unnnecessary code repitition
+* Organizes code into smaller units
+* Accept inputs and produce results
+* Makes programs easier to maintain
+
+</div>
 ---
 
 ### Function without parameters
-- **Parameters:** Are variables listed in a funcion definition.
-- **Arguments:** Are the actual values passed when calling the function
 
-- **Function declaration Syntax**:
+* **Parameters:** Are variables listed in a funcion definition.
+
+* **Arguments:** Are the actual values passed when calling the function
+
+* **Function declaration Syntax**:
+
 ```js
 function name(parameter1, parameter2, ...parameterN) {
   // code to be executed
@@ -621,6 +659,7 @@ sum();
 ---
 
 ### Function with Paramaeters
+
 ```js {monaco-run}{autorun: false}
 function displayName (firstName, lastName) {
   console.log(`Fullname: ${firstName} ${lastName}`)
@@ -630,7 +669,8 @@ displayName('Blessing', 'Dawodu');
 
 ```
 
-Note: When arguements are not passed to a function that has parameters, it automatically logs `undefined`. If you're deining a function that takes in parameters, define default values.
+<p class = "text-xs">Note: When arguments are not passed to a function that has parameters, it automatically logs `undefined`. If you're defining a function that takes in parameters, define default values.
+</p>
 
 ### Function with return
 
@@ -642,9 +682,12 @@ const result = substract(15, 6)
 console.log(result);
 ```
 
-<p>Note: Every code you put under the retrun keyword does not get executed. Implictly, if you do not add a value to the return keyword it returns `undefined`</p>
+<div class = "text-xs">
+Note: Every code you put under the retrun keyword does not get executed. Implictly, if you do not add a value to the return keyword it returns `undefined`and as Javascript is loosely typed, this can cause confusing results if care isn't taken.
 
-- Return: Ends the current function execution and provides result.
+* Return: Ends the current function execution and provides result.
+
+</div>
 
 ---
 
@@ -658,9 +701,9 @@ function getFullName(firstName, lastName) {
  console.log(fullName)
 ```
 
-### Function Expression
+#### Function Expression
 
-<p>Function expression is another variant of declaring a function whereby the function is assigned a value</p>
+<p class = "text-sm">Function expression is another variant of declaring a function whereby the function is assigned a value</p>
 
 ```js {monaco-run}{autorun: false}
 const greeting = function(message){
@@ -670,8 +713,11 @@ const greeting = function(message){
 
 ```
 
-### Arrow Function
-<p>Arrow Function prvide a shorter syntax for writing function expression</p>
+---
+
+#### Arrow Function
+
+<p class = "text-sm">Arrow Function prvide a shorter syntax for writing function expression</p>
 
 ```js {monaco-run}{autorun: false}
 const multiply = (a, b) => {
@@ -681,3 +727,25 @@ const multiply = (a, b) => {
 console.log(multiply(3, 4))
 ```
 
+---
+
+# So where is the Intersection with HTML?
+
+<div v-click >
+<h3 class="mt-5">
+The Document Object Model (DOM)
+</h3>
+
+<p class = "text-sm mt-5">
+See, Javascript on it's own actually doesn't have any built in notion of web pages or HTML. So the trick is this, the browser creates it's live, tree-like representation of HTML consisting of objects and nodes. The browser uses this interface to bridge the structure of HTML with the power of JavaScript so scripts can read, update, create, style and react to events on a HTML page dynamically as they happen in real time.
+</p>
+</div>
+
+<div v-click class = "text-sm" >
+So what does the DOM actually provide to JS?
+
+* For starters, like already established...It parses HTML into a hierarchy where the document is the root, tags are the branches and these branches have their content as their leaf nodes or children.
+* It also provides a live representation of the page. Changes you make via Javascript will immediately update to what the browser displays without needing a full page reload. You could say it acts as the one source of truth for the browser when it comes to rendering and updating web pages.
+* In addotion to it's live hierarchial representation, the DOM also provides us with the ability to manipulate the web page by selecting, modifying, listening to events and even creating/removing elements. It's a very powerful resource that allows web pages go from static text based pages to dynamic products.
+
+</div>
