@@ -681,3 +681,47 @@ const multiply = (a, b) => {
 console.log(multiply(3, 4))
 ```
 
+
+<!-- =========================================================================== -->
+<!-- START: GIT AND VERSION CONTROL PRESENTATIONS STARTS HERE -->
+<!-- ============================================================================ -->
+
+---
+layout: center
+class: text-white
+---
+
+# GIT AND VERSION CONTROL
+
+<!-- 
+Version Control,
+The terminal,
+Git & Github
+ -->
+
+---
+layout: center 
+---
+# Topics
+
+<p>Version Control</p>
+<p>The Terminal</p>
+<p>Git & GitHub</p>
+
+---
+
+<!-- STARTS: Version Control: Introduction, benefits and types. -->
+
+<!-- ENDS: Version Control: Introduction, benefits and types. -->
+<!-- =========== -->
+<!-- STARTS: The terminal and some everyday commands. -->
+
+<!-- ENDS: The terminal and some everyday commands. -->
+<!-- ============= -->
+<!-- STARTS: Git and GitHub -->
+
+<!-- ENDS: Git and GitHub -->
+<!-- ============================================================================ -->
+<!-- ENDS: GIT AND VERSION CONTROL PRESENTATIONS STARTS HERE -->
+<!-- ============================================================================ -->
+<!--  -->
