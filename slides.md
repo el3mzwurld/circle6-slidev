@@ -48,6 +48,63 @@ The last comment block of each slide will be treated as slide notes. It will be 
 <!-- Intro : Software Engineering, importance, Algorithms, problem solving, intro to web development -->
 
 ---
+
+## What is Software Engineering?
+
+<div class="text-sm">
+
+<p v-click>
+Software engineering is the practice of building software that works for real people, and keeps working as it grows. Writing code is only one part of it. The bigger part is solving the right problem, in a way others can understand, test, and maintain.
+</p>
+
+<div v-click class="mt-4">
+
+**Coding vs. engineering**
+
+Anyone can write a program that works once on their own laptop. Engineering is making it work reliably, for many users, with a team, over years. It's the difference between cooking at home and running a restaurant.
+
+</div>
+
+</div>
+
+---
+
+## The Software Life Cycle
+
+<div class="text-sm">
+
+1. **Understand** the problem: talk to the people who will use it
+2. **Design** the solution: decide the structure before building
+3. **Build** it: write the code
+4. **Test** it: find what breaks before users do
+5. **Deploy** it: release it
+6. **Maintain** it: fix, improve, repeat
+
+<p v-click class="mt-4">
+It's a loop, not a straight line. Software is never really finished.
+</p>
+
+</div>
+
+---
+
+## Habits Worth Building Early
+
+<div class="text-sm">
+
+* Break big problems into small ones
+* Write code others can read
+* Use Git from day one
+* Test your work
+* Keep learning, because tools change but fundamentals don't
+
+<p v-click class="mt-4">
+Software engineering isn't about knowing everything. It's about solving problems carefully, one small step at a time.
+</p>
+
+</div>
+
+---
 layout: center
 
 ---
