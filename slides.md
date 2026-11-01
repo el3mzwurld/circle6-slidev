@@ -711,6 +711,127 @@ layout: center
 ---
 
 <!-- STARTS: Version Control: Introduction, benefits and types. -->
+<h1>VERSION CONTROL</h1>
+<p>Introduction, benefits and types</p>
+<p><em>By Adesewa Tejumola</em></p>
+---
+ 
+<h1>THE PROBLEM</h1>
+<p>A basic group assignment was given in a Nigerian university. Everyone sends their part to the class rep on WhatsApp, but then the folder ends up like this:</p>
+<ul>
+  <li><code>Project.docx</code></li>
+  <li><code>Project_FINAL.docx</code></li>
+  <li><code>Project_FINAL_2.docx</code></li>
+  <li><code>Project_FINAL_FINAL_use_this_one.docx</code></li>
+</ul>
+<p v-click>Which one is the latest? Whose work got overwritten? Who exactly did what?</p>
+---
+ 
+<h1>INTRODUCTION TO VERSION CONTROL SYSTEMS</h1>
+<p>Version control is the process of tracking and managing changes to software code or a set of files over time. A <strong>version control system (VCS)</strong> is the tool that does this. It can also be defined as a system that records changes to files over time, allowing you to recall specific versions later.</p>
+<p v-click><strong>Example:</strong> a developer in Lagos and another in London are building the same app. Posting a flash drive back and forth across continents after every change would be slow, messy and also quite inefficient. A VCS lets them both work on the project and share changes easily.</p>
+---
+ 
+<h1>TRACKING CHANGES</h1>
+<p>A VCS keeps a <strong>snapshot</strong> of every change you make, stored in a database. So you have a record of what changed, who changed it and when it was changed, over time.</p>
+<p>
+You can compare any two versions. <code>+</code> means a line was added, <code>-</code> means a line was deleted:
+</p>
+
+```diff
+- const school = "AltSchool"
++ const school = "AltSchool Africa"
+```
+ 
+<p>You can also see how many files changed and how many lines were added or removed.</p>
+---
+ 
+<h1>BENEFITS OF VERSION CONTROL SYSTEMS</h1>
+<ul>
+  <li><strong>Backup:</strong> If for instance, your laptop suddenly goes off for good, you don't have to be scared of your code being lost. It's safe on the server.</li>
+  <li><strong>Traceability:</strong> Every change is recorded, so you can trace what changed, who changed it and when, and go back to an earlier version if something breaks or gets lost.</li>
+  <li><strong>Branching and merging:</strong> It is used to split a big project into separate flows. While one team builds a feature on one branch, another team can build a different feature on another, then the branches can be merged.</li>
+  <li><strong>Collaboration:</strong> Many people can work on one project without overwriting each other.</li>
+</ul>
+---
+ 
+<h1>TYPES OF VERSION CONTROL SYSTEMS</h1>
+<p>There are two main types:</p>
+<ol>
+  <li><strong>Centralised Version Control System (CVCS)</strong></li>
+  <li><strong>Distributed Version Control System (DVCS)</strong></li>
+</ol>
+---
+ 
+<h1>CENTRALISED VERSION CONTROL (CVCS)</h1>
+<p>A single "central" server is the main storage for every version of the code. Contributors <strong>commit</strong> their changes straight to it and <strong>update</strong> their copy from it.</p>
+
+```mermaid {scale: 0.7}
+flowchart LR
+  A[Contributor A] <-->|commit / update| R[(Central Repository)]
+  B[Contributor B] <-->|commit / update| R
+  C[Contributor C] <-->|commit / update| R
+```
+ 
+---
+ 
+<h1>CVCS: STRENGTHS AND WEAKNESSES</h1>
+<ul>
+  <li><strong>Strengths:</strong> It has one source of truth, which allows admins to easily control who has access.</li>
+  <li><strong>Weaknesses:</strong> The server is a single point of failure. If it goes down, nobody can commit. If its data is lost without a backup, the history is gone.</li>
+  <li><strong>Examples:</strong> CVS, Apache Subversion (SVN), Polytron Version Control System (PVCS), IBM Rational ClearCase, CADES, Perforce Helix.</li>
+</ul>
+<blockquote v-click>Like for instance, a bank where every record is on the server of the head office. When the branch says "network is down", nobody can do any transaction.</blockquote>
+---
+ 
+<h1>DISTRIBUTED VERSION CONTROL (DVCS)</h1>
+<p>Every version of the code is mirrored on both the "central" server and each developer's own computer. You <strong>commit</strong> to your local copy, then <strong>push</strong> your changes to the server and <strong>pull</strong> other people's changes from it.</p>
+
+```mermaid {scale: 0.6}
+flowchart LR
+  A[Contributor A] <-->|commit / update| LA[(Local Repository A)]
+  B[Contributor B] <-->|commit / update| LB[(Local Repository B)]
+  LA <-->|push / pull| R[(Central Repository)]
+  LB <-->|push / pull| R
+```
+ 
+---
+ 
+<h1>DVCS: STRENGTHS AND WEAKNESSES</h1>
+<ul>
+  <li><strong>Works offline:</strong> A developer can commit without the internet, then push later.</li>
+  <li><strong>Distributed backup:</strong> Every developer's copy is a full backup of the project.</li>
+  <li><strong>Branching and merging:</strong> You can split your copy into several branches and merge them back together.</li>
+  <li><strong>Weaknesses:</strong> It takes longer to learn; very large files need extra tools.</li>
+  <li><strong>Examples:</strong> Git, Bazaar, Plastic SCM, Darcs, Mercurial, Fossil, BitKeeper.</li>
+</ul>
+<blockquote v-click>Like on a class WhatsApp group, everyone has the whole chat on their phone. If one person loses their phone, the chat still exists on everyone else's phone.</blockquote>
+---
+ 
+<h1>CVCS VS DVCS</h1>
+<table>
+  <thead>
+    <tr><th></th><th>CVCS</th><th>DVCS</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Where the history lives</td><td>One central server</td><td>The server and every developer's computer</td></tr>
+    <tr><td>Work offline</td><td>No</td><td>Yes</td></tr>
+    <tr><td>Backup</td><td>Only the server</td><td>Every copy is a backup</td></tr>
+    <tr><td>Single point of failure</td><td>Yes</td><td>No</td></tr>
+    <tr><td>Sharing changes</td><td>Commit, update</td><td>Commit locally, then push and pull</td></tr>
+    <tr><td>Examples</td><td>SVN, CVS, Perforce Helix</td><td>Git, Mercurial, Bazaar</td></tr>
+  </tbody>
+</table>
+---
+
+<h1>BACK TO THE PROBLEM</h1>
+<ul>
+  <li><strong>Which one is the latest?</strong> <span v-click>There's one shared project with a full history, so the latest version is always clear. No more FINAL_FINAL files.</span></li>
+  <li><strong>Whose work got overwritten?</strong> <span v-click>No one's work is lost. Changes are merged instead of pasted over each other and any earlier version can be brought back.</span></li>
+  <li><strong>Who exactly did what?</strong> <span v-click>Every change is recorded with the person's name, the time it was sent and a message.</span></li>
+</ul>
+<p v-click>Git is a DVCS, and it's the one we use in this course. More on it in the Git and GitHub section.</p>
+---
 
 <!-- ENDS: Version Control: Introduction, benefits and types. -->
 <!-- =========== -->
