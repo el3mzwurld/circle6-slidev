@@ -719,6 +719,100 @@ layout: center
 <!-- ENDS: The terminal and some everyday commands. -->
 <!-- ============= -->
 <!-- STARTS: Git and GitHub -->
+# GIT AND GITHUB
+
+  
+  <h3 v-click style="text-decoration: underline"><strong>What is Git?</strong></h3>
+  <p v-click>Git is a popuplar Distributed Version Control System (DVCS) used to track changes to files and directories (i.e folders).</p>
+  <br />
+  <br />
+
+  <h3 v-click style="text-decoration: underline">What is GitHub?</h3>
+  <p v-click>This is a web-based platform that hosts files and directories tracked by Git.</p>
+  <p v-click>It also provides collaboration tools for developers.</p>
+
+---
+
+## SOME TERMINOLOGIES NEEDED TO WORK WITH GIT
+
+<ul>
+  <li v-click><strong>Repositories: </strong> This is a directory (also called Repo) that contains your project files and a .git directory that tracks the history of changes.</li>
+
+  <li v-click><strong>Clone: </strong> This means creating a copy of an existing Git repository.</li>
+</ul>
+
+<p>Others include: Clone, Commit, Branch, Merge, Remote, Pull, Push etc
+check out <a href="https://html.oluwasetemi.dev/156?clicks=12" target="blank" style="color:teal" >here</a> to see summary of these terminologies.</p>
+
+---
+
+# SOME GIT COMMANDS TO KNOW
+
+<p style="font-size: 48px; line-height: 1.5; color: white; font-weight: extra-bold; text-align: center; margin-top: 100px; margin-bottom: 40px">You want to initialize a new Git repo?</p>
+<code v-click style="font-size: 36px; text-align: center; display: block; background-color: #00ff331a; color: green; width: fit-content; margin: 0 auto; padding: 8px 16px; border-radius: 12px">git init</code>
+
+---
+
+# SOME GIT COMMANDS TO KNOW
+
+<p style="font-size: 48px; line-height: 1.5; color: white; font-weight: extra-bold; text-align: center; margin-top: 100px; margin-bottom: 40px">You want to clone a repository into a new directory?</p>
+<code v-click style="font-size: 36px; text-align: center; display: block; background-color: #00ff331a; color: green; width: fit-content; margin: 0 auto; padding: 8px 16px; border-radius: 12px">git clone</code>
+
+---
+
+# SOME GIT COMMANDS TO KNOW
+
+<p style="font-size: 48px; line-height: 1.5; color: white; font-weight: extra-bold; text-align: center; margin-top: 100px; margin-bottom: 40px">You want to add changes to the staging area?</p>
+<code v-click style="font-size: 36px; text-align: center; display: block; background-color: #00ff331a; color: green; width: fit-content; margin: 0 auto; padding: 8px 16px; border-radius: 12px">git add</code>
+
+---
+
+# SOME GIT COMMANDS TO KNOW
+
+<p style="font-size: 48px; line-height: 1.5; color: white; font-weight: extra-bold; text-align: center; margin-top: 100px; margin-bottom: 40px">You want to record changes made?</p>
+<code v-click style="font-size: 36px; text-align: center; display: block; background-color: #00ff331a; color: green; width: fit-content; margin: 0 auto; padding: 8px 16px; border-radius: 12px">git commit</code>
+
+---
+
+# SOME GIT COMMANDS TO KNOW
+
+<p style="font-size: 48px; line-height: 1.5; color: white; font-weight: extra-bold; text-align: center; margin-top: 100px; margin-bottom: 40px">You want to show the working tree status?</p>
+<code v-click style="font-size: 36px; text-align: center; display: block; background-color: #00ff331a; color: green; width: fit-content; margin: 0 auto; padding: 8px 16px; border-radius: 12px">git status</code>
+
+---
+
+# SOME GIT COMMANDS TO KNOW
+
+<p style="font-size: 48px; line-height: 1.5; color: white; font-weight: extra-bold; text-align: center; margin-top: 100px; margin-bottom: 40px">You want to show commit logs?</p>
+<code v-click style="font-size: 36px; text-align: center; display: block; background-color: #00ff331a; color: green; width: fit-content; margin: 0 auto; padding: 8px 16px; border-radius: 12px">git log</code>
+
+---
+
+# SOME GIT COMMANDS TO KNOW
+
+<p style="font-size: 48px; line-height: 1.5; color: white; font-weight: extra-bold; text-align: center; margin-top: 100px; margin-bottom: 40px">You want to list, create, or delete branches?</p>
+<code v-click style="font-size: 36px; text-align: center; display: block; background-color: #00ff331a; color: green; width: fit-content; margin: 0 auto; padding: 8px 16px; border-radius: 12px">git branch</code>
+
+---
+
+# SOME GIT COMMANDS TO KNOW
+
+<p style="font-size: 48px; line-height: 1.5; color: white; font-weight: extra-bold; text-align: center; margin-top: 100px; margin-bottom: 40px">You want to switch branches or restore working tree files?</p>
+<code v-click style="font-size: 36px; text-align: center; display: block; background-color: #00ff331a; color: green; width: fit-content; margin: 0 auto; padding: 8px 16px; border-radius: 12px">git checkout</code>
+
+---
+
+# SOME GIT COMMANDS TO KNOW
+
+<p style="font-size: 48px; line-height: 1.5; color: white; font-weight: extra-bold; text-align: center; margin-top: 100px; margin-bottom: 40px">You want to join two or more development histories together?</p>
+<code v-click style="font-size: 36px; text-align: center; display: block; background-color: #00ff331a; color: green; width: fit-content; margin: 0 auto; padding: 8px 16px; border-radius: 12px">git merge</code>
+
+---
+
+# SOME GIT COMMANDS TO KNOW
+
+<p style="font-size: 48px; line-height: 1.5; color: white; font-weight: extra-bold; text-align: center; margin-top: 100px; margin-bottom: 40px">check out <a href="https://html.oluwasetemi.dev/158" target="blank" style="color: teal">here</a> for more essential commands.</p>
+
 
 <!-- ENDS: Git and GitHub -->
 <!-- ============================================================================ -->
