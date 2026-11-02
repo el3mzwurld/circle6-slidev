@@ -905,11 +905,23 @@ flowchart LR
   
   <h3 style="text-decoration: underline"><strong>What is Git?</strong></h3>
   <p v-click>Git is a popuplar Distributed Version Control System (DVCS) used to track changes to files and directories (i.e folders).</p>
-  <br />
-  <br />
 
-  <h3 v-click style="text-decoration: underline">What is GitHub?</h3>
-  <p v-click>This is a web-based platform that hosts files and directories tracked by Git.</p>
+  <br/>
+
+  <p v-click>You decided to be cool, so you installed Git.</p>
+  <ul v-click>Upon installation, you're automatically provided with two platforms: 
+    <li>Git gui</li>
+    <li>Git bash</li>
+  </ul>
+
+  <p v-click>You can use both platforms to work with Git and version control your projects.</p>
+
+  <p v-click>Gui is alright. However with bash, you have the potential to ascend beyond being a mere mortal.</p>
+  
+---
+
+  <h3 style="text-decoration: underline">What is GitHub?</h3>
+  <p>This is a web-based platform that hosts files and directories tracked by Git.</p>
   <p v-click>It also provides collaboration tools for developers.</p>
   <p v-click><strong>Note: </strong>This means you will need data to use it.</p>
 
