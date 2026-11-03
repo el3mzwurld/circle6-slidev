@@ -893,7 +893,100 @@ flowchart LR
 <!-- ENDS: Version Control: Introduction, benefits and types. -->
 <!-- =========== -->
 <!-- STARTS: The terminal and some everyday commands. -->
+<h1>THE TERMINAL</h1>
+<p>By <strong>Al-Amin Yusuf</strong></p>
 
+---
+
+<div style="font-size: 24px; line-height: 1.5">
+  <p>To tell a computer what to do, there has to be a way to communicate with it.</p>
+  <ul>Generally, there are two common modes to achieve this communication: 
+    <li v-click>Using some sort of <strong>graphical user interface</strong> (GUI)</li>
+    <li v-click>Using the <strong>Terminal</strong></li>
+  </ul>
+
+</div>
+
+---
+
+<div style="font-size: 24px; line-height: 1.5">
+  <p>The GUI is all fine and good for common folks</p>
+  <p>But we are Engineers, the Terminal is our playing field!</p>
+</div>
+
+---
+
+<h1>The Terminal</h1>
+<div style="font-size: 24px">
+  <p style="line-height: 1.5"> The terminal is a tool that allows us to communicate with a computer by typing commands instead of clicking buttons. We can use it to create files, open folders, move between directories and perform other tasks.</p>
+</div>
+
+---
+
+<h1>Common Terminal Commands</h1>
+<div style="font-size: 24px">
+  <p style="line-height: 1.5"> These are some commands we use regularly when working with a computer:</p>
+  <table>
+    <thead>
+      <tr>
+        <td>Command</td> <td>What it does</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>pwd</code></td> <td>Shows the folder you are currently in.</td>
+      </tr>
+      <tr>
+        <td><code>ls</code></td> <td>Displays files and folders.</td>
+      </tr>
+      <tr>
+        <td><code>cd</code></td> <td>Moves you into another folder.</td>
+      </tr>
+      <tr>
+        <td><code>mkdir</code></td> <td>Creates a new folder.</td>
+      </tr>
+      <tr>
+        <td><code>touch</code></td> <td>Creates an empty file on Linux and
+macOS.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+---
+
+<div style="font-size: 24px">
+  <table>
+    <thead>
+      <tr>
+        <td>Command</td> <td>What it does</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>clear</code></td> <td>Clears the terminal screen.</td>
+      </tr>
+      <tr>
+        <td><code>rm</code></td> <td>Deletes files and folders permanently.</td>
+      </tr>
+      <tr>
+        <td><code>cp</code></td> <td>Copies files or folders.</td>
+      </tr>
+      <tr>
+        <td><code>mv</code></td> <td>Moves or renames files.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+---
+
+<h1>Note:</h1>
+<div style="font-size: 24px">
+  <p style="line-height: 1.5"> The commands discussed are only focused on 'sh terminals such as bash, fish, zsh etc.</p>
+</div>
+
+---
 
 <!-- ENDS: The terminal and some everyday commands. -->
 <!-- ============= -->
