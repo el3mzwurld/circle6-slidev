@@ -48,6 +48,63 @@ The last comment block of each slide will be treated as slide notes. It will be 
 <!-- Intro : Software Engineering, importance, Algorithms, problem solving, intro to web development -->
 
 ---
+
+## What is Software Engineering?
+
+<div class="text-sm">
+
+<p v-click>
+Software engineering is the practice of building software that works for real people, and keeps working as it grows. Writing code is only one part of it. The bigger part is solving the right problem, in a way others can understand, test, and maintain.
+</p>
+
+<div v-click class="mt-4">
+
+**Coding vs. engineering**
+
+Anyone can write a program that works once on their own laptop. Engineering is making it work reliably, for many users, with a team, over years. It's the difference between cooking at home and running a restaurant.
+
+</div>
+
+</div>
+
+---
+
+## The Software Life Cycle
+
+<div class="text-sm">
+
+1. **Understand** the problem: talk to the people who will use it
+2. **Design** the solution: decide the structure before building
+3. **Build** it: write the code
+4. **Test** it: find what breaks before users do
+5. **Deploy** it: release it
+6. **Maintain** it: fix, improve, repeat
+
+<p v-click class="mt-4">
+It's a loop, not a straight line. Software is never really finished.
+</p>
+
+</div>
+
+---
+
+## Habits Worth Building Early
+
+<div class="text-sm">
+
+* Break big problems into small ones
+* Write code others can read
+* Use Git from day one
+* Test your work
+* Keep learning, because tools change but fundamentals don't
+
+<p v-click class="mt-4">
+Software engineering isn't about knowing everything. It's about solving problems carefully, one small step at a time.
+</p>
+
+</div>
+
+---
 layout: center
 
 ---
@@ -749,3 +806,373 @@ So what does the DOM actually provide to JS?
 * In addotion to it's live hierarchial representation, the DOM also provides us with the ability to manipulate the web page by selecting, modifying, listening to events and even creating/removing elements. It's a very powerful resource that allows web pages go from static text based pages to dynamic products.
 
 </div>
+
+<!-- =========================================================================== -->
+<!-- START: GIT AND VERSION CONTROL PRESENTATIONS STARTS HERE -->
+<!-- ============================================================================ -->
+
+---
+
+layout: center
+class: text-white
+---
+
+# GIT AND VERSION CONTROL
+
+<!-- 
+Version Control,
+The terminal,
+Git & Github
+ -->
+
+---
+
+layout: center
+---
+
+# Topics
+
+<p>Version Control</p>
+<p>The Terminal</p>
+<p>Git & GitHub</p>
+
+---
+
+<!-- STARTS: Version Control: Introduction, benefits and types. -->
+<h1>VERSION CONTROL</h1>
+<p>Introduction, benefits and types</p>
+<p><em>By Adesewa Tejumola</em></p>
+---
+
+<h1>THE PROBLEM</h1>
+<p>A basic group assignment was given in a Nigerian university. Everyone sends their part to the class rep on WhatsApp, but then the folder ends up like this:</p>
+<ul>
+  <li><code>Project.docx</code></li>
+  <li><code>Project_FINAL.docx</code></li>
+  <li><code>Project_FINAL_2.docx</code></li>
+  <li><code>Project_FINAL_FINAL_use_this_one.docx</code></li>
+</ul>
+<p v-click>Which one is the latest? Whose work got overwritten? Who exactly did what?</p>
+---
+
+<h1>INTRODUCTION TO VERSION CONTROL SYSTEMS</h1>
+<p>Version control is the process of tracking and managing changes to software code or a set of files over time. A <strong>version control system (VCS)</strong> is the tool that does this. It can also be defined as a system that records changes to files over time, allowing you to recall specific versions later.</p>
+<p v-click><strong>Example:</strong> a developer in Lagos and another in London are building the same app. Posting a flash drive back and forth across continents after every change would be slow, messy and also quite inefficient. A VCS lets them both work on the project and share changes easily.</p>
+---
+
+<h1>TRACKING CHANGES</h1>
+<p>A VCS keeps a <strong>snapshot</strong> of every change you make, stored in a database. So you have a record of what changed, who changed it and when it was changed, over time.</p>
+<p>
+You can compare any two versions. <code>+</code> means a line was added, <code>-</code> means a line was deleted:
+</p>
+
+```diff
+- const school = "AltSchool"
++ const school = "AltSchool Africa"
+```
+
+<p>You can also see how many files changed and how many lines were added or removed.</p>
+---
+
+<h1>BENEFITS OF VERSION CONTROL SYSTEMS</h1>
+<ul>
+  <li><strong>Backup:</strong> If for instance, your laptop suddenly goes off for good, you don't have to be scared of your code being lost. It's safe on the server.</li>
+  <li><strong>Traceability:</strong> Every change is recorded, so you can trace what changed, who changed it and when, and go back to an earlier version if something breaks or gets lost.</li>
+  <li><strong>Branching and merging:</strong> It is used to split a big project into separate flows. While one team builds a feature on one branch, another team can build a different feature on another, then the branches can be merged.</li>
+  <li><strong>Collaboration:</strong> Many people can work on one project without overwriting each other.</li>
+</ul>
+---
+
+<h1>TYPES OF VERSION CONTROL SYSTEMS</h1>
+<p>There are two main types:</p>
+<ol>
+  <li><strong>Centralised Version Control System (CVCS)</strong></li>
+  <li><strong>Distributed Version Control System (DVCS)</strong></li>
+</ol>
+---
+
+<h1>CENTRALISED VERSION CONTROL (CVCS)</h1>
+<p>A single "central" server is the main storage for every version of the code. Contributors <strong>commit</strong> their changes straight to it and <strong>update</strong> their copy from it.</p>
+
+```mermaid {scale: 0.7}
+flowchart LR
+  A[Contributor A] <-->|commit / update| R[(Central Repository)]
+  B[Contributor B] <-->|commit / update| R
+  C[Contributor C] <-->|commit / update| R
+```
+
+---
+
+<h1>CVCS: STRENGTHS AND WEAKNESSES</h1>
+<ul>
+  <li><strong>Strengths:</strong> It has one source of truth, which allows admins to easily control who has access.</li>
+  <li><strong>Weaknesses:</strong> The server is a single point of failure. If it goes down, nobody can commit. If its data is lost without a backup, the history is gone.</li>
+  <li><strong>Examples:</strong> CVS, Apache Subversion (SVN), Polytron Version Control System (PVCS), IBM Rational ClearCase, CADES, Perforce Helix.</li>
+</ul>
+<blockquote v-click>Like for instance, a bank where every record is on the server of the head office. When the branch says "network is down", nobody can do any transaction.</blockquote>
+---
+
+<h1>DISTRIBUTED VERSION CONTROL (DVCS)</h1>
+<p>Every version of the code is mirrored on both the "central" server and each developer's own computer. You <strong>commit</strong> to your local copy, then <strong>push</strong> your changes to the server and <strong>pull</strong> other people's changes from it.</p>
+
+```mermaid {scale: 0.6}
+flowchart LR
+  A[Contributor A] <-->|commit / update| LA[(Local Repository A)]
+  B[Contributor B] <-->|commit / update| LB[(Local Repository B)]
+  LA <-->|push / pull| R[(Central Repository)]
+  LB <-->|push / pull| R
+```
+
+---
+
+<h1>DVCS: STRENGTHS AND WEAKNESSES</h1>
+<ul>
+  <li><strong>Works offline:</strong> A developer can commit without the internet, then push later.</li>
+  <li><strong>Distributed backup:</strong> Every developer's copy is a full backup of the project.</li>
+  <li><strong>Branching and merging:</strong> You can split your copy into several branches and merge them back together.</li>
+  <li><strong>Weaknesses:</strong> It takes longer to learn; very large files need extra tools.</li>
+  <li><strong>Examples:</strong> Git, Bazaar, Plastic SCM, Darcs, Mercurial, Fossil, BitKeeper.</li>
+</ul>
+<blockquote v-click>Like on a class WhatsApp group, everyone has the whole chat on their phone. If one person loses their phone, the chat still exists on everyone else's phone.</blockquote>
+---
+
+<h1>CVCS VS DVCS</h1>
+<table>
+  <thead>
+    <tr><th></th><th>CVCS</th><th>DVCS</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Where the history lives</td><td>One central server</td><td>The server and every developer's computer</td></tr>
+    <tr><td>Work offline</td><td>No</td><td>Yes</td></tr>
+    <tr><td>Backup</td><td>Only the server</td><td>Every copy is a backup</td></tr>
+    <tr><td>Single point of failure</td><td>Yes</td><td>No</td></tr>
+    <tr><td>Sharing changes</td><td>Commit, update</td><td>Commit locally, then push and pull</td></tr>
+    <tr><td>Examples</td><td>SVN, CVS, Perforce Helix</td><td>Git, Mercurial, Bazaar</td></tr>
+  </tbody>
+</table>
+---
+
+<h1>BACK TO THE PROBLEM</h1>
+<ul>
+  <li><strong>Which one is the latest?</strong> <span v-click>There's one shared project with a full history, so the latest version is always clear. No more FINAL_FINAL files.</span></li>
+  <li><strong>Whose work got overwritten?</strong> <span v-click>No one's work is lost. Changes are merged instead of pasted over each other and any earlier version can be brought back.</span></li>
+  <li><strong>Who exactly did what?</strong> <span v-click>Every change is recorded with the person's name, the time it was sent and a message.</span></li>
+</ul>
+<p v-click>Git is a DVCS, and it's the one we use in this course. More on it in the Git and GitHub section.</p>
+---
+
+<!-- ENDS: Version Control: Introduction, benefits and types. -->
+<!-- =========== -->
+<!-- STARTS: The terminal and some everyday commands. -->
+<h1>THE TERMINAL</h1>
+<p>By <strong>Al-Amin Yusuf</strong></p>
+
+---
+
+<div style="font-size: 24px; line-height: 1.5">
+  <p>To tell a computer what to do, there has to be a way to communicate with it.</p>
+  <ul>Generally, there are two common modes to achieve this communication:
+    <li v-click>Using some sort of <strong>graphical user interface</strong> (GUI)</li>
+    <li v-click>Using the <strong>Terminal</strong></li>
+  </ul>
+
+</div>
+
+---
+
+<div style="font-size: 24px; line-height: 1.5">
+  <p>The GUI is all fine and good for common folks</p>
+  <p>But we are Engineers, the Terminal is our playing field!</p>
+</div>
+
+---
+
+<h1>The Terminal</h1>
+<div style="font-size: 24px">
+  <p style="line-height: 1.5"> The terminal is a tool that allows us to communicate with a computer by typing commands instead of clicking buttons. We can use it to create files, open folders, move between directories and perform other tasks.</p>
+</div>
+
+---
+
+<h1>Common Terminal Commands</h1>
+<div style="font-size: 24px">
+  <p style="line-height: 1.5"> These are some commands we use regularly when working with a computer:</p>
+  <table>
+    <thead>
+      <tr>
+        <td>Command</td> <td>What it does</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>pwd</code></td> <td>Shows the folder you are currently in.</td>
+      </tr>
+      <tr>
+        <td><code>ls</code></td> <td>Displays files and folders.</td>
+      </tr>
+      <tr>
+        <td><code>cd</code></td> <td>Moves you into another folder.</td>
+      </tr>
+      <tr>
+        <td><code>mkdir</code></td> <td>Creates a new folder.</td>
+      </tr>
+      <tr>
+        <td><code>touch</code></td> <td>Creates an empty file on Linux and
+macOS.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+---
+
+<div style="font-size: 24px">
+  <table>
+    <thead>
+      <tr>
+        <td>Command</td> <td>What it does</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>clear</code></td> <td>Clears the terminal screen.</td>
+      </tr>
+      <tr>
+        <td><code>rm</code></td> <td>Deletes files and folders permanently.</td>
+      </tr>
+      <tr>
+        <td><code>cp</code></td> <td>Copies files or folders.</td>
+      </tr>
+      <tr>
+        <td><code>mv</code></td> <td>Moves or renames files.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+---
+
+<h1>Note:</h1>
+<div style="font-size: 24px">
+  <p style="line-height: 1.5"> The commands discussed are only focused on 'sh terminals such as bash, fish, zsh etc.</p>
+</div>
+
+---
+
+<!-- ENDS: The terminal and some everyday commands. -->
+<!-- ============= -->
+<!-- STARTS: Git and GitHub -->
+<h1>GIT AND GITHUB</h1>
+  <p>By <strong>Abdulhameed Muhammed</strong></p>
+
+---
+  
+  <h3 style="text-decoration: underline"><strong>What is Git?</strong></h3>
+  <p v-click>Git is a popuplar Distributed Version Control System (DVCS) used to track changes to files and directories (i.e folders).</p>
+
+  <br/>
+
+  <p v-click>You decided to be cool, so you installed Git.</p>
+  <ul v-click>Upon installation, you're automatically provided with two platforms:
+    <li>Git gui</li>
+    <li>Git bash</li>
+  </ul>
+
+  <p v-click>You can use both platforms to work with Git and version control your projects.</p>
+
+  <p v-click>Gui is alright. However with bash, you have the potential to ascend beyond being a mere mortal.</p>
+  
+---
+
+  <h3 style="text-decoration: underline">What is GitHub?</h3>
+  <p>This is a web-based platform that hosts files and directories tracked by Git.</p>
+  <p v-click>It also provides collaboration tools for developers.</p>
+  <p v-click><strong>Note: </strong>This means you will need data to use it.</p>
+
+---
+
+<h2 style="margin-bottom: 20px">SOME TERMINOLOGIES NEEDED TO WORK WITH GIT</h2>
+
+<ul style="font-size: 24px; line-height: 1.5;">
+  <li v-click><strong>Repositories: </strong> This is a directory (also called Repo) that contains your project files and a .git directory that tracks the history of changes.</li>
+
+  <li v-click><strong>Clone: </strong> This means creating a copy of an existing Git repository onto your local computer.</li>
+</ul>
+
+<p v-click style="font-size: 20px">Others include: Commit, Branch, Merge, Remote, Pull, Push etc
+check out <a href="https://html.oluwasetemi.dev/156?clicks=12" target="blank" style="color:teal" >here</a> to see summary of these terminologies.</p>
+
+---
+
+<h1>SOME GIT COMMANDS TO KNOW</h1>
+
+<p style="font-size: 48px; line-height: 1.5; color: white; font-weight: extra-bold; text-align: center; margin-top: 100px; margin-bottom: 40px">You want to initialize a new Git repo?</p>
+<code v-click style="font-size: 36px; text-align: center; display: block; background-color: #00ff331a; color: green; width: fit-content; margin: 0 auto; padding: 8px 16px; border-radius: 12px">git init</code>
+
+---
+
+<h1>SOME GIT COMMANDS TO KNOW</h1>
+
+<p style="font-size: 48px; line-height: 1.5; color: white; font-weight: extra-bold; text-align: center; margin-top: 100px; margin-bottom: 40px">You want to clone a repository into a new directory?</p>
+<code v-click style="font-size: 36px; text-align: center; display: block; background-color: #00ff331a; color: green; width: fit-content; margin: 0 auto; padding: 8px 16px; border-radius: 12px">git clone</code>
+
+---
+
+<h1>SOME GIT COMMANDS TO KNOW</h1>
+
+<p style="font-size: 48px; line-height: 1.5; color: white; font-weight: extra-bold; text-align: center; margin-top: 100px; margin-bottom: 40px">You want to add changes to the staging area?</p>
+<code v-click style="font-size: 36px; text-align: center; display: block; background-color: #00ff331a; color: green; width: fit-content; margin: 0 auto; padding: 8px 16px; border-radius: 12px">git add</code>
+
+---
+
+<h1>SOME GIT COMMANDS TO KNOW</h1>
+
+<p style="font-size: 48px; line-height: 1.5; color: white; font-weight: extra-bold; text-align: center; margin-top: 100px; margin-bottom: 40px">You want to record changes made?</p>
+<code v-click style="font-size: 36px; text-align: center; display: block; background-color: #00ff331a; color: green; width: fit-content; margin: 0 auto; padding: 8px 16px; border-radius: 12px">git commit</code>
+
+---
+
+<h1>SOME GIT COMMANDS TO KNOW</h1>
+
+<p style="font-size: 48px; line-height: 1.5; color: white; font-weight: extra-bold; text-align: center; margin-top: 100px; margin-bottom: 40px">You want to show the working tree status?</p>
+<code v-click style="font-size: 36px; text-align: center; display: block; background-color: #00ff331a; color: green; width: fit-content; margin: 0 auto; padding: 8px 16px; border-radius: 12px">git status</code>
+
+---
+
+<h1>SOME GIT COMMANDS TO KNOW</h1>
+
+<p style="font-size: 48px; line-height: 1.5; color: white; font-weight: extra-bold; text-align: center; margin-top: 100px; margin-bottom: 40px">You want to show commit logs?</p>
+<code v-click style="font-size: 36px; text-align: center; display: block; background-color: #00ff331a; color: green; width: fit-content; margin: 0 auto; padding: 8px 16px; border-radius: 12px">git log</code>
+
+---
+
+<h1>SOME GIT COMMANDS TO KNOW</h1>
+
+<p style="font-size: 48px; line-height: 1.5; color: white; font-weight: extra-bold; text-align: center; margin-top: 100px; margin-bottom: 40px">You want to list, create, or delete branches?</p>
+<code v-click style="font-size: 36px; text-align: center; display: block; background-color: #00ff331a; color: green; width: fit-content; margin: 0 auto; padding: 8px 16px; border-radius: 12px">git branch</code>
+
+---
+
+<h1>SOME GIT COMMANDS TO KNOW</h1>
+
+<p style="font-size: 48px; line-height: 1.5; color: white; font-weight: extra-bold; text-align: center; margin-top: 100px; margin-bottom: 40px">You want to switch branches or restore working tree files?</p>
+<code v-click style="font-size: 36px; text-align: center; display: block; background-color: #00ff331a; color: green; width: fit-content; margin: 0 auto; padding: 8px 16px; border-radius: 12px">git checkout</code>
+
+---
+
+<h1>SOME GIT COMMANDS TO KNOW</h1>
+
+<p style="font-size: 48px; line-height: 1.5; color: white; font-weight: extra-bold; text-align: center; margin-top: 100px; margin-bottom: 40px">You want to join two or more development histories together?</p>
+<code v-click style="font-size: 36px; text-align: center; display: block; background-color: #00ff331a; color: green; width: fit-content; margin: 0 auto; padding: 8px 16px; border-radius: 12px">git merge</code>
+
+---
+
+<h1>SOME GIT COMMANDS TO KNOW</h1>
+
+<p style="font-size: 48px; line-height: 1.5; color: white; font-weight: extra-bold; text-align: center; margin-top: 100px; margin-bottom: 40px">check out <a href="https://html.oluwasetemi.dev/158" target="blank" style="color: teal">here</a> for more essential commands.</p>
+
+<!-- ENDS: Git and GitHub -->
+<!-- ============================================================================ -->
+<!-- ENDS: GIT AND VERSION CONTROL PRESENTATIONS STARTS HERE -->
+<!-- ============================================================================ -->
+<!--  -->
