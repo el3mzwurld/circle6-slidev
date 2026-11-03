@@ -37,15 +37,21 @@ Our Summary of our Month 1 Learnings at AltSchool Africa
   </a>
 </div>
 
-<!--
-The last comment block of each slide will be treated as slide notes. It will be visible and editable in Presenter Mode along with the slide. [Read more in the docs](https://sli.dev/guide/syntax.html#notes)
--->
+---
+layout: center
 
 ---
 
 # An Introduction to Software Engineering
 
+<footer class="mt-20 text-sm">
+Authored by : <!--Input authors here-->
+
+</footer>
 <!-- Intro : Software Engineering, importance, Algorithms, problem solving, intro to web development -->
+
+---
+layout: center
 
 ---
 
@@ -112,17 +118,96 @@ layout: center
 # How the web works
 
 <!-- Introduction to html : CSS and JS mentioned, but not emphasized -->
+<div v-click class="text-center">
+<p>An Introduction to HTML</p>
 
+<p class = "mt-15">
+Authored by : Bethel Amadi.</p>
+</div>
 ---
 layout: center
 
 ---
 
-# What ties it all together ?
+# What is HTML?
 
+<p v-click class ="text-sm">
+HTML (or Hypertext Markup Language) is the standard markup language for creating and structuring content on the web. It's one of the pillars for applications built on the web and it is used to create elements such as headers, footers, paragraphs, tables, forms, etc.
+</p>
+
+<p v-click class="text-sm mt-[10px]">
+Is it a programming language? No. That's because it actually doesn't perform locical computations or execute programming instructions. Instead it can structure and manipulate web pages by using tags, elements and attributes telling web browsers what content should be displayed and how to organize it.</p>
+---
+
+## Layout of a traditional HTML Document
+
+```html
+<DOCTYPE html> <!--Tell the browser..."this is a html document and it uses hmtl 5"-->
+
+  <html lang="en">
+    <head>
+      <!-- information about the web page lives inside here...things such as the meta data, title, linked style sheets and scripts, linked fonts etc. -->
+    </head>
+
+    <body>
+      <!-- this is what the browser renders, elements go in here for example...-->
+
+       <p>This is my first web page.</p>
+    </body>
+  </html> <!--This is an html tag, everything concerning the html document lives inside this tag-->
+```
+
+---
+
+# HTML Tags and Elements
+
+<div v-click class="text-sm">
+Tags and elements are the building blocks of html elements, especially in the body. They allow the proper structuring of a web page and it's content. Elements are made up of tags and their content which goes inside the tag, some which may have opening and closing tags, others may just have one tag which self closes.
 <br>
-<v-click>Let's talk about Javascript</v-click>
+For example, navigation bars could go in the <span class="text-red">header</span> tag, or if you wanted to put it in a sidebar you could use the <span class="text-red">aside</span> tag..I like to think of html as a base language, and it can do very good things for you when you can use it simply...but when you can make use of semantic html, it's way more powerful because it can simplify tricky page structures and designs.
 
+<p class="text-sm mt-10">
+HTML elements can also have attributes, some which describe them, others allow them to reference files, links or values even. These can help and also impact the way elements behave</p>
+
+```html
+<h2 class="header-2">This is a header element</h2> <!--This is an element, with it's h2 tag and it's content(which can be empty) and it's class attribute-->
+```
+
+<p class="text-sm">
+HTML on it's own is a powerful tool..It's able to perform and simplify tedious tasks on the web by using some nifty elements but HTML on it's own isn't complete. So let's take a look at the pillars of web development that complete web development aside HTML.</p>
+</div>
+
+---
+
+## CSS and Javascript
+
+<p v-click>
+HTML, CSS and Javascript are the three fundamentals used to create modern web applications. Each of them have a different responsibility but they come together to produce powerful, attractive and interactive digital experiences for users. So what does each do?
+
+<div class="text-sm mt-3.5">
+ <ul class="flex flex-col gap-1.5">
+ <li>
+ HTML provides structure by defining what exists on the page and how it's organized. For example, you can use html to create a login form with fields for name, address, delivery options etc. But by itself HTML does not provide styling or advanced interactive behavior to make that form look good, or submit.</li>
+
+  <li>
+ Cascading style sheets allows us to use simple and sophisticated styling to beautify our web pages. It determines colors, spacing, fonts, borders, backgrounds, animations, positioning, responsive layouts etc. CSS can transform our basic form from before into a polished visual interface. It heavily impacts web development and usage of web applications by transforming the user experience between different screen sizes or devices. Snappy animations, beautiful transitions etc. all play a role in making the overall feel of a web page more than just words and images.</li>
+
+ <li>
+ The feel we said CSS brings to a web page? Javascript dials that up by adding behaviour and interactivity. It allows the web page to come alive...literally. It makes web applications functional and dynamic, it can execute logic, process data and respond to user actions on the web page. For example, when the user wants to submit our form from before, Javascript can validate, collate results into an object and also send HTTP requests over the web to APIs and databases. It is an extremely powerful pillar that takes web pages from static documents to dynamic tools that run the web.
+ </li>
+ </ul>
+</div>
+</p>
+---
+layout: center
+
+---
+
+# Let's talk about Javascript
+
+<footer v-click class="mt-20 text-sm">
+Authored by : Elemi Samuel and Blessing Dawodu.
+</footer>
 ---
 layout: center
 
@@ -132,9 +217,15 @@ layout: center
 What is Javascript?
 </h1>
 
-<div v-click class="mt-5 text-[14px] leading-6">
+<div v-click class="mt-5">
 Javascript is a fundamental building block for web-powered applications. It is the backbone for webpages, and serves as the main provider of application functionality that makes web apps usable, interactive, reliable and intuitive.
-<br>
+</div>
+
+---
+
+## JavaScript and the web
+
+<div class="text-sm">
 HTML gives the web page structure and CSS allows styling. Javascript(also referred to as JS) delivers interactivity, it translates problem solving logic and it serves functional behavior to the web page--allowing sites to move beyond static text or designs and respond to user actions as they happen. Let's look at a brief example of what it looks like, then we can start on the javascript basics.
 
 ```js
@@ -153,7 +244,12 @@ const color = 'blue'
 <p class="text-[14px]">
 A variable is a container used for storing data. Think of your RAM as a kitchen, various dishes need cooking and there are various ingridients present within said kitchen all at the same time...well, your variable in this analogy would be a container used to house said ingridient and is saved within the kitchen (memory) so it can be used within a certain context. In javascript, these variables need to be <em>declared</em> in order to be able to house data inside them...and to do this you can either use the <span class="text-purple my-[5px]">let</span>, <span class="text-purple my-[5px]">const</span> or  <span class="text-purple my-[5px]">var</span> keywords to declare a variable.</p>
 
-<div class="text-sm mt-2.5">
+---
+
+## Naming Variables
+
+<div class="text-sm">
+
 Javascript also has a couple of rules guiding variable names that we have to follow. They are :
 
 * the first character must be a digit
@@ -172,6 +268,7 @@ console.log(age)
 ```
 <!-- The nitty gritty : Most programming languages actually treat variables as references to a memory address, whether that's as a pointer or as a direct reference to it's memory address. So yes, you can think of a variable as a container, but under the hood the container itself is a slot in memory, the variable itself is just a reference to it...so when you call a variable, remember you're only referencing a memory address which contains the data you're storing. -->
 </div>
+
 ---
 
 <div class= "text-sm flex flex-col gap-5">
@@ -205,7 +302,7 @@ A value in JS has to be of a certain data type. The data type defines the operat
 </p>
 <div v-click class = "text-sm">
 
-<span class = "text-red-400 text-[16px]">Number</span>
+<span class = "text-red-400">Number</span>
 
 * A number in javascript can be an integer or a floating point, both fall under the <span class = "text-red-400">Number</span>
  umbrella.
@@ -240,6 +337,14 @@ const name  = "Elemz' // ❌ bad practice
 const bool = true
 const isEligible = false
 ```
+
+</div>
+
+---
+
+## Data Types (continued)
+
+<div v-click class = "text-sm">
 
 * An <span class = "text-red-400">Object</span> type is a collection of keys and values used to store collections of data.
 
@@ -502,7 +607,7 @@ switch (day) {
 Loops let you repeat a set of statement for as long as the condition is met, or until a condition is met.
 </p>
 
-<div class="text-base mt-3"> Types of Loops
+<div class="mt-3"> Types of Loops
 
 * **while loop**
 * **do...loop**
@@ -531,7 +636,7 @@ while (condition) {
 
 ---
 
-<div>
+## The `while` loop: example
 
 ```js {monaco-run}{autorun: false}
 let count = 1
@@ -541,9 +646,7 @@ while (count <= 3) {
 }
 ```
 
-</div>
-
-<p class="mt-10"></p>
+---
 
 ## The `do...while` loop
 
@@ -558,8 +661,6 @@ do {
 } while (condition);
 
 ```
-
-<p class="mt-10"></p>
 
 ```js {monaco-run}{autorun: false}
 let number = 5;
@@ -588,8 +689,6 @@ for (initialization; condition; update) {
 
 ```
 
-<p class="mt-10"></p>
-
 ```js {monaco-run}{autorun: false}
 for (let i = 1; i <= 5; i++) {
   console.log(i);
@@ -616,8 +715,6 @@ for (const element of iterable) {
 }
 
 ```
-
-<p class="mt-10"></p>
 
 ```js {monaco-run}{autorun: false}
 const fruits = ['Pawpaw', 'Orange', 'Pineapple', 'Banana'];
@@ -665,7 +762,7 @@ for (const key in student) {
 
 # Functions
 
-<p class="text-[16px]">
+<p>
 A Function is a resuable block of code written to perform a particular task (it can be called many times).
 </p>
 
@@ -679,7 +776,7 @@ A Function is a resuable block of code written to perform a particular task (it 
 * The function body, containing the code to be executed, is enclosed in curly braces.
 * To execute the code, function must be called by its name followed by parentheses.
 
-### Importance of Function
+### Importance of Functions
 
 * It helps avoid unnnecessary code repitition
 * Organizes code into smaller units
@@ -715,7 +812,7 @@ sum();
 
 ---
 
-### Function with Paramaeters
+### Function with Parameters
 
 ```js {monaco-run}{autorun: false}
 function displayName (firstName, lastName) {
@@ -729,7 +826,9 @@ displayName('Blessing', 'Dawodu');
 <p class = "text-xs">Note: When arguments are not passed to a function that has parameters, it automatically logs `undefined`. If you're defining a function that takes in parameters, define default values.
 </p>
 
-### Function with return
+---
+
+### Function with Return
 
 ```js {monaco-run}{autorun: false}
 function substract (a, b) {
@@ -798,6 +897,10 @@ See, Javascript on it's own actually doesn't have any built in notion of web pag
 </p>
 </div>
 
+---
+
+## What the DOM provides
+
 <div v-click class = "text-sm" >
 So what does the DOM actually provide to JS?
 
@@ -812,9 +915,8 @@ So what does the DOM actually provide to JS?
 <!-- ============================================================================ -->
 
 ---
-
 layout: center
-class: text-white
+
 ---
 
 # GIT AND VERSION CONTROL
@@ -825,9 +927,6 @@ The terminal,
 Git & Github
  -->
 
----
-
-layout: center
 ---
 
 # Topics
@@ -969,7 +1068,7 @@ flowchart LR
 
 ---
 
-<div style="font-size: 24px; line-height: 1.5">
+<div>
   <p>To tell a computer what to do, there has to be a way to communicate with it.</p>
   <ul>Generally, there are two common modes to achieve this communication:
     <li v-click>Using some sort of <strong>graphical user interface</strong> (GUI)</li>
@@ -980,7 +1079,7 @@ flowchart LR
 
 ---
 
-<div style="font-size: 24px; line-height: 1.5">
+<div>
   <p>The GUI is all fine and good for common folks</p>
   <p>But we are Engineers, the Terminal is our playing field!</p>
 </div>
@@ -988,14 +1087,14 @@ flowchart LR
 ---
 
 <h1>The Terminal</h1>
-<div style="font-size: 24px">
+<div>
   <p style="line-height: 1.5"> The terminal is a tool that allows us to communicate with a computer by typing commands instead of clicking buttons. We can use it to create files, open folders, move between directories and perform other tasks.</p>
 </div>
 
 ---
 
 <h1>Common Terminal Commands</h1>
-<div style="font-size: 24px">
+<div>
   <p style="line-height: 1.5"> These are some commands we use regularly when working with a computer:</p>
   <table>
     <thead>
@@ -1026,7 +1125,7 @@ macOS.</td>
 
 ---
 
-<div style="font-size: 24px">
+<div>
   <table>
     <thead>
       <tr>
@@ -1053,7 +1152,7 @@ macOS.</td>
 ---
 
 <h1>Note:</h1>
-<div style="font-size: 24px">
+<div>
   <p style="line-height: 1.5"> The commands discussed are only focused on 'sh terminals such as bash, fish, zsh etc.</p>
 </div>
 
@@ -1093,83 +1192,83 @@ macOS.</td>
 
 <h2 style="margin-bottom: 20px">SOME TERMINOLOGIES NEEDED TO WORK WITH GIT</h2>
 
-<ul style="font-size: 24px; line-height: 1.5;">
+<ul>
   <li v-click><strong>Repositories: </strong> This is a directory (also called Repo) that contains your project files and a .git directory that tracks the history of changes.</li>
 
   <li v-click><strong>Clone: </strong> This means creating a copy of an existing Git repository onto your local computer.</li>
 </ul>
 
-<p v-click style="font-size: 20px">Others include: Commit, Branch, Merge, Remote, Pull, Push etc
+<p v-click>Others include: Commit, Branch, Merge, Remote, Pull, Push etc
 check out <a href="https://html.oluwasetemi.dev/156?clicks=12" target="blank" style="color:teal" >here</a> to see summary of these terminologies.</p>
 
 ---
 
 <h1>SOME GIT COMMANDS TO KNOW</h1>
 
-<p style="font-size: 48px; line-height: 1.5; color: white; font-weight: extra-bold; text-align: center; margin-top: 100px; margin-bottom: 40px">You want to initialize a new Git repo?</p>
+<p style="color: white; font-weight: extra-bold; text-align: center; margin-top: 100px; margin-bottom: 40px">You want to initialize a new Git repo?</p>
 <code v-click style="font-size: 36px; text-align: center; display: block; background-color: #00ff331a; color: green; width: fit-content; margin: 0 auto; padding: 8px 16px; border-radius: 12px">git init</code>
 
 ---
 
 <h1>SOME GIT COMMANDS TO KNOW</h1>
 
-<p style="font-size: 48px; line-height: 1.5; color: white; font-weight: extra-bold; text-align: center; margin-top: 100px; margin-bottom: 40px">You want to clone a repository into a new directory?</p>
+<p style="color: white; font-weight: extra-bold; text-align: center; margin-top: 100px; margin-bottom: 40px">You want to clone a repository into a new directory?</p>
 <code v-click style="font-size: 36px; text-align: center; display: block; background-color: #00ff331a; color: green; width: fit-content; margin: 0 auto; padding: 8px 16px; border-radius: 12px">git clone</code>
 
 ---
 
 <h1>SOME GIT COMMANDS TO KNOW</h1>
 
-<p style="font-size: 48px; line-height: 1.5; color: white; font-weight: extra-bold; text-align: center; margin-top: 100px; margin-bottom: 40px">You want to add changes to the staging area?</p>
+<p style="color: white; font-weight: extra-bold; text-align: center; margin-top: 100px; margin-bottom: 40px">You want to add changes to the staging area?</p>
 <code v-click style="font-size: 36px; text-align: center; display: block; background-color: #00ff331a; color: green; width: fit-content; margin: 0 auto; padding: 8px 16px; border-radius: 12px">git add</code>
 
 ---
 
 <h1>SOME GIT COMMANDS TO KNOW</h1>
 
-<p style="font-size: 48px; line-height: 1.5; color: white; font-weight: extra-bold; text-align: center; margin-top: 100px; margin-bottom: 40px">You want to record changes made?</p>
+<p style="color: white; font-weight: extra-bold; text-align: center; margin-top: 100px; margin-bottom: 40px">You want to record changes made?</p>
 <code v-click style="font-size: 36px; text-align: center; display: block; background-color: #00ff331a; color: green; width: fit-content; margin: 0 auto; padding: 8px 16px; border-radius: 12px">git commit</code>
 
 ---
 
 <h1>SOME GIT COMMANDS TO KNOW</h1>
 
-<p style="font-size: 48px; line-height: 1.5; color: white; font-weight: extra-bold; text-align: center; margin-top: 100px; margin-bottom: 40px">You want to show the working tree status?</p>
+<p style="color: white; font-weight: extra-bold; text-align: center; margin-top: 100px; margin-bottom: 40px">You want to show the working tree status?</p>
 <code v-click style="font-size: 36px; text-align: center; display: block; background-color: #00ff331a; color: green; width: fit-content; margin: 0 auto; padding: 8px 16px; border-radius: 12px">git status</code>
 
 ---
 
 <h1>SOME GIT COMMANDS TO KNOW</h1>
 
-<p style="font-size: 48px; line-height: 1.5; color: white; font-weight: extra-bold; text-align: center; margin-top: 100px; margin-bottom: 40px">You want to show commit logs?</p>
+<p style="color: white; font-weight: extra-bold; text-align: center; margin-top: 100px; margin-bottom: 40px">You want to show commit logs?</p>
 <code v-click style="font-size: 36px; text-align: center; display: block; background-color: #00ff331a; color: green; width: fit-content; margin: 0 auto; padding: 8px 16px; border-radius: 12px">git log</code>
 
 ---
 
 <h1>SOME GIT COMMANDS TO KNOW</h1>
 
-<p style="font-size: 48px; line-height: 1.5; color: white; font-weight: extra-bold; text-align: center; margin-top: 100px; margin-bottom: 40px">You want to list, create, or delete branches?</p>
+<p style="color: white; font-weight: extra-bold; text-align: center; margin-top: 100px; margin-bottom: 40px">You want to list, create, or delete branches?</p>
 <code v-click style="font-size: 36px; text-align: center; display: block; background-color: #00ff331a; color: green; width: fit-content; margin: 0 auto; padding: 8px 16px; border-radius: 12px">git branch</code>
 
 ---
 
 <h1>SOME GIT COMMANDS TO KNOW</h1>
 
-<p style="font-size: 48px; line-height: 1.5; color: white; font-weight: extra-bold; text-align: center; margin-top: 100px; margin-bottom: 40px">You want to switch branches or restore working tree files?</p>
+<p style="color: white; font-weight: extra-bold; text-align: center; margin-top: 100px; margin-bottom: 40px">You want to switch branches or restore working tree files?</p>
 <code v-click style="font-size: 36px; text-align: center; display: block; background-color: #00ff331a; color: green; width: fit-content; margin: 0 auto; padding: 8px 16px; border-radius: 12px">git checkout</code>
 
 ---
 
 <h1>SOME GIT COMMANDS TO KNOW</h1>
 
-<p style="font-size: 48px; line-height: 1.5; color: white; font-weight: extra-bold; text-align: center; margin-top: 100px; margin-bottom: 40px">You want to join two or more development histories together?</p>
+<p style="color: white; font-weight: extra-bold; text-align: center; margin-top: 100px; margin-bottom: 40px">You want to join two or more development histories together?</p>
 <code v-click style="font-size: 36px; text-align: center; display: block; background-color: #00ff331a; color: green; width: fit-content; margin: 0 auto; padding: 8px 16px; border-radius: 12px">git merge</code>
 
 ---
 
 <h1>SOME GIT COMMANDS TO KNOW</h1>
 
-<p style="font-size: 48px; line-height: 1.5; color: white; font-weight: extra-bold; text-align: center; margin-top: 100px; margin-bottom: 40px">check out <a href="https://html.oluwasetemi.dev/158" target="blank" style="color: teal">here</a> for more essential commands.</p>
+<p style="color: white; font-weight: extra-bold; text-align: center; margin-top: 100px; margin-bottom: 40px">check out <a href="https://html.oluwasetemi.dev/158" target="blank" style="color: teal">here</a> for more essential commands.</p>
 
 <!-- ENDS: Git and GitHub -->
 <!-- ============================================================================ -->
