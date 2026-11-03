@@ -45,6 +45,10 @@ The last comment block of each slide will be treated as slide notes. It will be 
 
 # An Introduction to Software Engineering
 
+<p class="text-sm mt-4">
+Presented by <b>Waheed Oladunjoye</b> and <b>Oyebode Treasure Amaka</b>
+</p>
+
 <!-- Intro : Software Engineering, importance, Algorithms, problem solving, intro to web development -->
 
 ---
@@ -54,31 +58,98 @@ The last comment block of each slide will be treated as slide notes. It will be 
 <div class="text-sm">
 
 <p v-click>
-Software engineering is the practice of building software that works for real people, and keeps working as it grows. Writing code is only one part of it. The bigger part is solving the right problem, in a way others can understand, test, and maintain.
+Software engineering is the branch of computer science that deals with designing, building, testing and maintaining software. Coding is only one part. The bigger part is solving the right problem in a way others can understand and maintain.
 </p>
 
-<div v-click class="mt-4">
-
-**Coding vs. engineering**
-
-Anyone can write a program that works once on their own laptop. Engineering is making it work reliably, for many users, with a team, over years. It's the difference between cooking at home and running a restaurant.
-
-</div>
+<p v-click class="mt-4">
+Anyone can write a program that works once on their laptop. Engineering is making it work reliably, for many users, over years. It's the difference between cooking at home and running a restaurant.
+</p>
 
 </div>
 
 ---
 
-## The Software Life Cycle
+## Types and Why It Matters
 
 <div class="text-sm">
 
-1. **Understand** the problem: talk to the people who will use it
-2. **Design** the solution: decide the structure before building
-3. **Build** it: write the code
-4. **Test** it: find what breaks before users do
-5. **Deploy** it: release it
-6. **Maintain** it: fix, improve, repeat
+<v-clicks>
+
+* **Web and apps:** front-end, back-end, full-stack and mobile engineers
+* **Systems:** embedded, DevOps and security engineers
+* **Data and quality:** data engineers, scientists and test engineers
+
+</v-clicks>
+
+<p v-click class="mt-4">
+It matters because it drives innovation, keeps software safe and reliable, automates work, connects people, and lets businesses grow.
+</p>
+
+</div>
+
+---
+
+## Problem Solving and Algorithms
+
+<div class="text-sm">
+
+<p v-click>
+Before writing code, ask: <b>what exactly is the problem?</b> Understand it, break it into small pieces, plan the steps, then test and improve.
+</p>
+
+<p v-click class="mt-4">
+An <b>algorithm</b> is a step-by-step set of instructions for solving a problem, like a recipe for a computer: <b>Input</b> → <b>Steps</b> → <b>Output</b>.
+</p>
+
+<p v-click class="mt-4">
+A good one is clear, finishes, gives the right answer every time, and doesn't waste time or memory.
+</p>
+
+</div>
+
+---
+
+## Types of Algorithms
+
+<div class="text-sm">
+
+<v-clicks>
+
+* **Searching:** finding a contact on your phone
+* **Sorting:** arranging products by price on Jumia
+* **Routing:** Google Maps finding the shortest route
+* **Text:** spell-check and Google search
+* **Math:** a bank app working out interest
+
+</v-clicks>
+
+</div>
+
+---
+
+## Measuring It: Big-O
+
+<div class="text-sm">
+
+Big-O tells us how an algorithm's time and memory use grow as the data grows.
+
+<v-clicks>
+
+* **O(1), very fast:** picking up the top book on a table
+* **O(n), normal:** checking every student in a class one by one
+* **O(n²), slow:** comparing every student to every other student
+
+</v-clicks>
+
+</div>
+
+---
+
+## The Software Development Life Cycle (SDLC)
+
+<div class="text-sm">
+
+**Understand** → **Design** → **Build** → **Test** → **Deploy** → **Maintain**
 
 <p v-click class="mt-4">
 It's a loop, not a straight line. Software is never really finished.
