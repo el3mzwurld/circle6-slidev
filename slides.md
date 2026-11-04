@@ -119,69 +119,95 @@ layout: center
 
 <div class="text-sm leading-7">
 
-HTML stands for <strong>HyperText Markup Language</strong>. It gives a webpage its structure, just like the frame of a house gives it shape before paint, furniture, or decoration are added.
+HTML (HyperText Markup Language) is the standard language used to create and structure webpage content. It organizes headings, paragraphs, links, images, audio, and video so browsers can display them.
 
 <p v-click class="mt-4">
-Every webpage is made of elements such as headings, paragraphs, links, images, lists, and buttons.
+Think of a webpage as a house: HTML provides the rooms and walls, CSS adds the colours and layout, and JavaScript adds actions and interaction.
 </p>
 
-<ul v-click class="mt-4 list-disc list-inside text-left mx-auto max-w-xl">
-  <li>HTML builds the content</li>
-  <li>CSS styles the content</li>
-  <li>JavaScript makes it interactive</li>
-</ul>
+```html
+<h1>Welcome to My Website</h1>
+<p>This is my first webpage.</p>
+```
+
+<p v-click>
+The <code>&lt;h1&gt;</code> element displays a main heading, while <code>&lt;p&gt;</code> displays a paragraph.
+</p>
 
 </div>
 
 ---
 
-## Tags, Elements, and Content
+## Tags and Elements
 
 <div class="text-sm leading-7">
 
-An HTML element usually has:
+HTML tags are keywords inside angle brackets that tell the browser how to structure content. An element usually has three parts:
 
 <ul class="list-disc list-inside text-left mx-auto max-w-xl">
-  <li>an opening tag</li>
-  <li>content</li>
-  <li>a closing tag</li>
+  <li><strong>Opening tag:</strong> marks where the element begins</li>
+  <li><strong>Content:</strong> the information displayed on the page</li>
+  <li><strong>Closing tag:</strong> marks where it ends; it includes a slash</li>
 </ul>
 
 ```html
-<p>This is a paragraph.</p>
-<h1>This is a heading.</h1>
-<a href="https://example.com">Visit Example</a>
+<p>This is an HTML paragraph.</p>
 ```
 
 <p v-click class="mt-4">
-The <strong>tag</strong> tells the browser what kind of content it is. The <strong>element</strong> is the complete tag plus its content.
+Here, <code>&lt;p&gt;</code> is the opening tag, the sentence is the content, and <code>&lt;/p&gt;</code> is the closing tag. Together, they form a paragraph element.
 </p>
 
 </div>
 
 ---
 
-## Attributes and Nested Elements
+## Attributes: Name and Value
 
 <div class="text-sm leading-7">
 
-Attributes provide extra information about an element.
+Attributes add information or functionality to an element. They are written in the opening tag, usually as a name followed by a value.
 
 ```html
-<img src="profile.jpg" alt="A smiling student" />
-<a href="https://altschoolafrica.com" target="_blank">AltSchool</a>
+<a href="https://www.google.com">Visit Google</a>
+<img src="image.jpg" alt="A beautiful landscape">
 ```
 
-<p v-click class="mt-4">
-Attributes usually appear in the opening tag and come in <strong>name="value"</strong> pairs.
+<ul class="list-disc list-inside text-left mx-auto max-w-xl">
+  <li>In the link, <code>href</code> is the attribute name and the URL is its value; the text is what visitors see.</li>
+  <li>In the image, <code>src</code> gives the image location and <code>alt</code> describes it.</li>
+</ul>
+
+</div>
+
+---
+
+## Nested and Void Elements
+
+<div class="text-sm leading-7">
+
+Nested elements sit inside other elements to create a logical content hierarchy. The outer element is the <strong>parent</strong>; elements inside it are <strong>children</strong>.
+
+```html
+<div>
+  <h2>About Us</h2>
+  <p>Welcome to our website.</p>
+</div>
+```
+
+<p v-click>
+The <code>div</code> is the parent; the heading and paragraph are its children. Close nested elements in the reverse order they were opened.
 </p>
 
-<p v-click class="mt-4">
-Elements can also be nested inside each other, which helps us structure more complex content.
+<p v-click class="mt-3">
+Void elements have no content and do not use closing tags. They cannot contain other elements.
 </p>
 
 ```html
-<p>My favorite course is <strong>HTML</strong> and <em>web design</em>.</p>
+<img src="photo.jpg" alt="My photograph">
+<br>
+<hr>
+<input type="text">
 ```
 
 </div>
@@ -192,97 +218,125 @@ Elements can also be nested inside each other, which helps us structure more com
 
 <div class="text-sm leading-7">
 
-A basic page usually follows this structure:
+The document follows a standard arrangement so the browser can interpret its metadata and page content.
 
 ```html
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <title>My Page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My First Website</title>
   </head>
   <body>
-    <h1>Hello, world!</h1>
-    <p>Welcome to my webpage.</p>
+    <h1>Welcome to My Website</h1>
+    <p>This is my first HTML document.</p>
   </body>
 </html>
 ```
 
-<p v-click class="mt-4">
-The <strong>head</strong> contains metadata, while the <strong>body</strong> contains the visible content users see.
-</p>
+<ul class="list-disc list-inside text-left text-xs mx-auto max-w-2xl">
+  <li><code>&lt;!DOCTYPE html&gt;</code> declares an HTML5 document; <code>&lt;html&gt;</code> contains the whole page.</li>
+  <li><code>&lt;head&gt;</code> holds metadata: character encoding, the viewport setting for different screen sizes, and the browser-tab title.</li>
+  <li><code>&lt;body&gt;</code> holds the visible page content. The <code>lang</code> attribute identifies the page language.</li>
+</ul>
 
 </div>
 
 ---
 
-## Images in HTML
+## Images: `img`, `src`, and `alt`
 
 <div class="text-sm leading-7">
 
-The image element lets us add pictures to a webpage.
+The <code>&lt;img&gt;</code> element displays an image. Its <code>src</code> attribute gives the file path; <code>alt</code> provides a text alternative if the image cannot load and for screen-reader users.
 
 ```html
-<img src="images/team.jpg" alt="Group photo of students" />
+<img
+  src="nature.jpg"
+  alt="A beautiful green forest"
+  width="500"
+  height="300"
+>
 ```
 
 <p v-click class="mt-4">
-The <strong>src</strong> attribute points to the image file, while the <strong>alt</strong> attribute provides text when the image cannot load or is read by assistive technology.
-</p>
-
-<p v-click class="mt-4">
-Good alt text makes websites more accessible and easier to understand.
+The optional <code>width</code> and <code>height</code> attributes set image dimensions. Write meaningful, concise alt text for informative images; use <code>alt=""</code> when an image is purely decorative.
 </p>
 
 </div>
 
 ---
 
-## Audio and Video in HTML
+## Audio: Embedding Sound
 
 <div class="text-sm leading-7">
 
-HTML also supports media playback directly in the browser.
+The <code>&lt;audio&gt;</code> element embeds music, recordings, and other sound files. A nested <code>&lt;source&gt;</code> identifies the file and its format.
 
 ```html
 <audio controls>
-  <source src="audio/lesson.mp3" type="audio/mpeg" />
+  <source src="music.mp3" type="audio/mpeg">
+  Your browser does not support audio playback.
 </audio>
-
-<video controls width="480">
-  <source src="video/demo.mp4" type="video/mp4" />
-  <track kind="captions" srclang="en" src="video/demo.vtt" default />
-</video>
 ```
 
-<p v-click class="mt-4">
-The <strong>controls</strong> attribute adds play, pause, and volume controls. Captions improve accessibility for videos.
-</p>
+<ul class="list-disc list-inside text-left mx-auto max-w-xl">
+  <li><code>controls</code> displays play, pause, and volume controls for listeners.</li>
+  <li><code>src</code> gives the media location; <code>type</code> tells the browser its format.</li>
+  <li>The text inside the element is fallback content for browsers that do not support audio.</li>
+</ul>
+
+<p v-click class="text-sm">Other useful audio attributes include <code>loop</code> (repeat playback), <code>muted</code> (start silent), and <code>preload</code> (hint how to load the file).</p>
 
 </div>
 
 ---
 
-## Why HTML Matters
+## Video: Sources, Posters, and Captions
 
 <div class="text-sm leading-7">
 
-HTML is the foundation of the web.
+The <code>&lt;video&gt;</code> element plays video in the browser. <code>controls</code> gives viewers playback controls, and <code>&lt;source&gt;</code> specifies the file and format.
+
+```html
+<video controls width="600" poster="thumbnail.jpg">
+  <source src="tutorial.mp4" type="video/mp4">
+  <track
+    src="captions.vtt"
+    kind="captions"
+    srclang="en"
+    label="English"
+    default
+  >
+  Your browser does not support video playback.
+</video>
+```
 
 <ul class="list-disc list-inside text-left mx-auto max-w-xl">
-  <li>It gives structure to content</li>
-  <li>It helps browsers understand what is being shown</li>
-  <li>It improves accessibility with proper semantics</li>
-  <li>It works together with CSS and JavaScript</li>
+  <li><code>poster</code> shows a preview image before playback starts.</li>
+  <li><code>&lt;track&gt;</code> adds timed text; its <code>src</code> points to the caption file, <code>kind</code> sets its type, and <code>srclang</code> and <code>label</code> identify its language.</li>
+  <li>Captions include dialogue and relevant sounds; subtitles usually provide dialogue or its translation. Both can help viewers follow the video.</li>
 </ul>
 
+</div>
+
+---
+
+## From HTML Structure to JavaScript Behavior
+
+<div class="text-sm leading-7">
+
+HTML gives content its structure. CSS controls how that content looks and is arranged. JavaScript makes the page respond to actions and change over time.
+
 <p v-click class="mt-4">
-Without HTML, the web would have no meaningful content to style or interact with.
+Now that we have seen how HTML describes a webpage, let's move from its structure to the behavior that makes it interactive.
 </p>
 
 </div>
 
 ---
+
 layout: center
 
 ---
