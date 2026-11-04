@@ -114,6 +114,175 @@ layout: center
 <!-- Introduction to html : CSS and JS mentioned, but not emphasized -->
 
 ---
+
+# HTML: The Structure of a Webpage
+
+<div class="text-sm leading-7">
+
+HTML stands for <strong>HyperText Markup Language</strong>. It gives a webpage its structure, just like the frame of a house gives it shape before paint, furniture, or decoration are added.
+
+<p v-click class="mt-4">
+Every webpage is made of elements such as headings, paragraphs, links, images, lists, and buttons.
+</p>
+
+<ul v-click class="mt-4 list-disc list-inside text-left mx-auto max-w-xl">
+  <li>HTML builds the content</li>
+  <li>CSS styles the content</li>
+  <li>JavaScript makes it interactive</li>
+</ul>
+
+</div>
+
+---
+
+## Tags, Elements, and Content
+
+<div class="text-sm leading-7">
+
+An HTML element usually has:
+
+<ul class="list-disc list-inside text-left mx-auto max-w-xl">
+  <li>an opening tag</li>
+  <li>content</li>
+  <li>a closing tag</li>
+</ul>
+
+```html
+<p>This is a paragraph.</p>
+<h1>This is a heading.</h1>
+<a href="https://example.com">Visit Example</a>
+```
+
+<p v-click class="mt-4">
+The <strong>tag</strong> tells the browser what kind of content it is. The <strong>element</strong> is the complete tag plus its content.
+</p>
+
+</div>
+
+---
+
+## Attributes and Nested Elements
+
+<div class="text-sm leading-7">
+
+Attributes provide extra information about an element.
+
+```html
+<img src="profile.jpg" alt="A smiling student" />
+<a href="https://altschoolafrica.com" target="_blank">AltSchool</a>
+```
+
+<p v-click class="mt-4">
+Attributes usually appear in the opening tag and come in <strong>name="value"</strong> pairs.
+</p>
+
+<p v-click class="mt-4">
+Elements can also be nested inside each other, which helps us structure more complex content.
+</p>
+
+```html
+<p>My favorite course is <strong>HTML</strong> and <em>web design</em>.</p>
+```
+
+</div>
+
+---
+
+## Basic HTML Document Structure
+
+<div class="text-sm leading-7">
+
+A basic page usually follows this structure:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>My Page</title>
+  </head>
+  <body>
+    <h1>Hello, world!</h1>
+    <p>Welcome to my webpage.</p>
+  </body>
+</html>
+```
+
+<p v-click class="mt-4">
+The <strong>head</strong> contains metadata, while the <strong>body</strong> contains the visible content users see.
+</p>
+
+</div>
+
+---
+
+## Images in HTML
+
+<div class="text-sm leading-7">
+
+The image element lets us add pictures to a webpage.
+
+```html
+<img src="images/team.jpg" alt="Group photo of students" />
+```
+
+<p v-click class="mt-4">
+The <strong>src</strong> attribute points to the image file, while the <strong>alt</strong> attribute provides text when the image cannot load or is read by assistive technology.
+</p>
+
+<p v-click class="mt-4">
+Good alt text makes websites more accessible and easier to understand.
+</p>
+
+</div>
+
+---
+
+## Audio and Video in HTML
+
+<div class="text-sm leading-7">
+
+HTML also supports media playback directly in the browser.
+
+```html
+<audio controls>
+  <source src="audio/lesson.mp3" type="audio/mpeg" />
+</audio>
+
+<video controls width="480">
+  <source src="video/demo.mp4" type="video/mp4" />
+  <track kind="captions" srclang="en" src="video/demo.vtt" default />
+</video>
+```
+
+<p v-click class="mt-4">
+The <strong>controls</strong> attribute adds play, pause, and volume controls. Captions improve accessibility for videos.
+</p>
+
+</div>
+
+---
+
+## Why HTML Matters
+
+<div class="text-sm leading-7">
+
+HTML is the foundation of the web.
+
+<ul class="list-disc list-inside text-left mx-auto max-w-xl">
+  <li>It gives structure to content</li>
+  <li>It helps browsers understand what is being shown</li>
+  <li>It improves accessibility with proper semantics</li>
+  <li>It works together with CSS and JavaScript</li>
+</ul>
+
+<p v-click class="mt-4">
+Without HTML, the web would have no meaningful content to style or interact with.
+</p>
+
+</div>
+
+---
 layout: center
 
 ---
