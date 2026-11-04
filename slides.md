@@ -29,7 +29,7 @@ Our Summary of our Month 1 Learnings at AltSchool Africa
 </div>
 
 <div class="abs-br m-6 text-sm inline-block">
-  <p class = "mr-3.2">Click here to meet some of the collaborators to this project</p>
+  <span class = "mr-3.2">Click here to meet some of the collaborators to this project</span>
   <a href="https://github.com/el3mzwurld/circle6-slidev.git" target="_blank" class="slidev-icon-btn">
     <carbon:logo-github />
   </a>
