@@ -49,7 +49,7 @@ Presented by <b>Waheed Oladunjoye</b> and <b>Oyebode Treasure Amaka</b>
 </p>
 
 <footer class="mt-20 text-sm">
-Authored by : <!--Input authors here-->
+
 
 </footer>
 <!-- Intro : Software Engineering, importance, Algorithms, problem solving, intro to web development -->
