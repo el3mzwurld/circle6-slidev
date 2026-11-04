@@ -1,0 +1,13 @@
+.slidev-page {
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+.slidev-page p,
+.slidev-page li,
+.slidev-page blockquote,
+.slidev-page td,
+.slidev-page th {
+  font-size: 0.875rem !important;
+  line-height: 1.5;
+}
