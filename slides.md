@@ -191,7 +191,7 @@ layout: center
 <p>An Introduction to HTML</p>
 
 <p class = "mt-15">
-Authored by : Bethel Amadi.</p>
+Authored by : Bethel Amadi and Adegoke Oladipupo</p>
 </div>
 ---
 
