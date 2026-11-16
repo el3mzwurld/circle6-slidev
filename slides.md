@@ -408,6 +408,141 @@ The <code>&lt;video&gt;</code> element plays video in the browser. <code>control
 
 ---
 
+## Media in Practice: Organising Files
+- Author: Busari Habiblahi
+
+<div class="text-sm leading-7">
+
+Webpages often use external media files. Organising these files into folders makes projects easier to manage.
+
+<div v-click class="mt-3">
+
+**Example project structure:**
+
+```text
+my-website/
+├── index.html
+└── media/
+    ├── nature.jpg
+    ├── music.mp3
+    ├── tutorial.mp4
+    └── captions.vtt
+```
+</div>
+<p v-click class="mt-3">
+
+**Why organise media files?**
+
+- Keeps project files organised.
+- Makes media easier to locate.
+- Helps developers manage larger projects.
+</p>
+</div>
+
+---
+
+## Understanding Relative File Paths
+
+<div class="text-sm leading-7">
+
+A relative path tells the browser where a file is located in relation to the current HTML document.
+
+<div v-click class="mt-3">
+Since our media files are inside the `media` folder, we reference them using:
+
+| Media | Relative path |
+|---|---|
+| Image | `media/nature.jpg` |
+| Audio | `media/music.mp3` |
+| Video | `media/tutorial.mp4` |
+| Captions | `media/captions.vtt` |
+</div>
+
+<div v-click class="mt-3">
+
+**Example:**
+
+```html
+<img src="media/nature.jpg" alt="A green forest">
+```
+
+The browser looks inside the `media` folder to find `nature.jpg`.
+</div>
+</div>
+
+---
+
+## <u> Embedding Images, Audio and Video (In Summary)</u>
+
+<div class="text-sm leading-6">
+
+**1. Displaying an image**
+
+```html
+<img src="media/nature.jpg" alt="A green forest">
+```
+
+**2. Embedding audio**
+
+```html
+<audio controls>
+  <source src="media/music.mp3" type="audio/mpeg">
+  Your browser does not support audio.
+</audio>
+```
+
+**3. Embedding video with captions**
+
+```html
+<video controls width="500">
+  <source src="media/tutorial.mp4" type="video/mp4">
+  <track src="media/captions.vtt"
+       kind="captions"
+       srclang="en"
+       label="English"
+       default>
+  Your browser does not support video.
+</video>
+```
+
+</div>
+
+---
+
+## Making HTML Media Accessible
+
+<div class="text-sm leading-6">
+
+**1. Write meaningful image descriptions**
+
+The `alt` attribute describes informative images to users who cannot see them. Use `alt=""` for decorative images.
+
+<div v-click class="mt-3">
+
+**2. Provide captions for videos**
+
+Captions help users who are deaf or hard of hearing follow video content.
+
+</div>
+
+<div v-click class="mt-3">
+
+**3. Make media easy to control**
+
+- Use the `controls` attribute to provide playback controls.
+- Ensure users can operate controls with a keyboard.
+- Avoid unexpected autoplay.
+- Provide a text transcript for audio content where possible.
+
+</div>
+</div>
+
+
+---
+layout: center
+
+---
+
 ## CSS and Javascript
 
 <p v-click>
